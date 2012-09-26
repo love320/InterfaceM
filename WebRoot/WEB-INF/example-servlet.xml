@@ -10,8 +10,8 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<context:component-scan base-package="org.springframework.samples.petclinic.web" />
 	<context:component-scan base-package="org.love320.interfacem" />
 
-	<!-- 对模型视图名称的解析，在请求时模型视图名称添加前后缀 -->
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+	<!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/view/" p:suffix=".jsp" />
+
 </beans>
