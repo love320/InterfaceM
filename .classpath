@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="packlib/org.springframework.beans-3.1.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="packlib/commons-logging.jar"/>
 	<classpathentry kind="lib" path="packlib/org.springframework.asm-3.1.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="packlib/org.springframework.expression-3.1.2.RELEASE.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
