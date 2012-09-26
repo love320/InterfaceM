@@ -3,11 +3,11 @@
   type="WEB"
   name="InterfaceM.git"
   id="myeclipse.1348566047699"
-  context-root="/InterfaceM.git"
+  context-root="/Interfacem"
   j2ee-spec="5.0"
   archive="InterfaceM.git.war">
   <attributes>
-    <attribute name="webrootdir" value="WebRoot" />
+    <attribute name="webrootdir" value="/WebRoot" />
   </attributes>
 </project-module>
 
