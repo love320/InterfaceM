@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -22,5 +22,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     HelloWorldController. admin@love320.com -http://www.love320.com <br>
+    msg:${message} <br/>
+    name:${name} 
+    <form action="" method="post">
+    	<input type="text" name="name" id="name"/>
+    	<input type="submit" value="ok" />
+    </form>
   </body>
 </html>

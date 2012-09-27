@@ -19,7 +19,7 @@ public class ServicesBase {
 	public boolean newText(){
 		String sql = "SELECT * FROM BootAnimation";
 		List list = resJdbcTemplate.queryForList(sql);
-		System.out.println(list);
+		//System.out.println(list);
 		return true;
 	}
 	
