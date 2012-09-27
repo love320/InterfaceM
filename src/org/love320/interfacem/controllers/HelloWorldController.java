@@ -1,4 +1,4 @@
-package org.love320.interfacem;
+package org.love320.interfacem.controllers;
 
 import org.love320.interfacem.services.ServicesBase;
 import org.springframework.beans.factory.annotation.Autowired;
