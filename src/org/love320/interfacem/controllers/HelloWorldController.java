@@ -24,4 +24,11 @@ public class HelloWorldController {
 		return "helloWorld";
 	}
 	
+	public void zd(String str){
+		if(str.length() > 0 ){
+			
+		}
+	}
+	
+	
 }

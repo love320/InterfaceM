@@ -23,5 +23,4 @@ public class ServicesBase {
 		return true;
 	}
 	
-	
 }
