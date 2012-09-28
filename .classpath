@@ -16,5 +16,7 @@
 	<classpathentry kind="lib" path="packlib/commons-dbcp-1.4.jar"/>
 	<classpathentry kind="lib" path="packlib/org.springframework.transaction-3.1.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="packlib/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="packlib/org.springframework.context.support-3.1.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="packlib/freemarker.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

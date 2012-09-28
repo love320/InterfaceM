@@ -17,7 +17,7 @@ public class ServicesBase {
 	}
 	
 	public boolean newText(){
-		String sql = "SELECT * FROM BootAnimation";
+		String sql = "SELECT * FROM interface";
 		List list = resJdbcTemplate.queryForList(sql);
 		//System.out.println(list);
 		return true;
