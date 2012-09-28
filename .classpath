@@ -8,9 +8,17 @@
 	<classpathentry kind="lib" path="packlib/org.springframework.context-3.1.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="packlib/org.springframework.core-3.1.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="packlib/org.springframework.beans-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/commons-logging.jar"/>
 	<classpathentry kind="lib" path="packlib/org.springframework.asm-3.1.2.RELEASE.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="packlib/org.springframework.expression-3.1.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="packlib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="packlib/mysql-connector-java-5.1.13.jar"/>
+	<classpathentry kind="lib" path="packlib/org.springframework.jdbc-3.1.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="packlib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="packlib/org.springframework.transaction-3.1.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="packlib/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="packlib/org.springframework.context.support-3.1.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="packlib/freemarker.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
