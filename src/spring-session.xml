@@ -35,7 +35,7 @@ http://www.springframework.org/schema/mvc
 		<property name="viewClass"
 			value="org.springframework.web.servlet.view.freemarker.FreeMarkerView" />
 		<property name="prefix" value="" />
-		<property name="suffix" value=".ftl" />
+		<property name="suffix" value=".htm" />
 		<property name="cache" value="true" />
 		<property name="exposeSpringMacroHelpers" value="true" />
 		<property name="contentType" value="text/html;charset=UTF-8" />
