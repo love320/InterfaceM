@@ -8,19 +8,27 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ServicesBase {
-	
-	@Autowired
-	private JdbcTemplate resJdbcTemplate;
 
-	public void setResJdbcTemplate(JdbcTemplate resJdbcTemplate) {
-		this.resJdbcTemplate = resJdbcTemplate;
-	}
-	
-	public boolean newText(){
+	@Autowired
+	private JdbcTemplate resJdbc;
+
+	public boolean newText() {
 		String sql = "SELECT * FROM interface";
-		List list = resJdbcTemplate.queryForList(sql);
-		//System.out.println(list);
+		List list = resJdbc.queryForList(sql);
 		return true;
 	}
-	
+
+	/** 获取接口组名列表 */
+	public List newFaceGroup() {
+		String sql = "SELECT  `id`,  `name`,  `type`,  `status`,  LEFT(`text`, 256) as text,  `createtime` FROM `interfacegroup`";
+		return resJdbc.queryForList(sql);
+	}
+
+	/** 获取指定组接口列表 */
+	public List newFaceList(Integer id) {
+		String sql = "SELECT * FROM interface ";
+		sql += " where groupid = ?";
+		return resJdbc.queryForList(sql, id);
+	}
+
 }
