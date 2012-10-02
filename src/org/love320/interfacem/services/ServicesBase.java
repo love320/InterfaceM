@@ -1,6 +1,7 @@
 package org.love320.interfacem.services;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -29,6 +30,15 @@ public class ServicesBase {
 		String sql = "SELECT * FROM interface ";
 		sql += " where groupid = ?";
 		return resJdbc.queryForList(sql, id);
+	}
+
+	public Map newInfo(Integer id) {
+		String sql = "SELECT * FROM interface WHERE id = ?";
+		try {
+			return resJdbc.queryForMap(sql,id);
+		} catch (Exception e) {
+		}
+		return null;
 	}
 
 }
