@@ -115,25 +115,25 @@ base=springMacroRequestContext.getContextUrl("")>
 						<div class="control-group">
 							<label class="control-label" for="inputText">撰写者</label>
 							<div class="controls">
-								<input type="text" id="inputText" placeholder="撰写者">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" >接口说明</label>
-							<div class="controls">
-								<textarea rows="3"></textarea>
+								<input type="text" name="writers"  id="writers" value="${entity.writers}" placeholder="撰写者">
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="inputText">接口版本</label>
 							<div class="controls">
-								<input type="text" id="inputText" placeholder="接口版本" >
+								<input type="text" name="version" id="version" value="${entity.version}" placeholder="1.01" >
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" >接口说明</label>
+							<div class="controls">
+								<textarea name="text" id="text" rows="3">${entity.text}</textarea>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="inputText">返回格式说明</label>
 							<div class="controls">
-								<input type="text" id="inputText" placeholder="返回格式说明">
+								<textarea name="returntext" id="returntext" rows="3">${entity.returntext}</textarea>
 							</div>
 						</div>
 					</section>
@@ -143,7 +143,13 @@ base=springMacroRequestContext.getContextUrl("")>
 				
 					<legend>输入参数</legend>
 				<section id="romdataC">
-				
+					<form class="form-horizontal" action="${base}/interfacce-save.do"   method="post">
+					<input type="hidden" name="faceid" value="${entity.id}" />
+						<div class="controls controls-row">
+  <input class="span4" type="text" placeholder=".span4">
+  <input class="span1" type="text" placeholder=".span1">
+</div>
+					</form>
 				</section>	
 				
 				<legend>返回参数</legend>
