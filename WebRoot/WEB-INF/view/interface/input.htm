@@ -54,62 +54,103 @@ base=springMacroRequestContext.getContextUrl("")>
 			</div>
 
 			<div class="span9">
-				<form class="bs-docs-example form-horizontal">
+			<div class="bs-docs-example ">
+				<form class="form-horizontal" action="${base}/interfacce-save.do"   method="post">
+				<input type="hidden" name="id" value="${entity.id}" />
+				<input type="hidden" name="groupid" value="${entity.groupid}" />
 					<legend>基本信息</legend>
 					<section id="romdataA">
 						<div class="control-group">
 							<label class="control-label" for="inputText">接口名</label>
 							<div class="controls">
-								<input type="text" id="inputText" placeholder="接口名">
+								<input type="text" id="name" name="name" value="${entity.name}" placeholder="接口名">
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" >接口类型</label>
 							<div class="controls">
-								<select>
-								  <option>1</option>
-								  <option>2</option>
-								  <option>3</option>
-								  <option>4</option>
-								  <option>5</option>
+								<select name="type" id="type">
+								  <option value="1"  <#if entity.type == 1>selected</#if>>HTTP</option>
+								  <option value="2"  <#if entity.type == 2>selected</#if>>其它</option>
 								</select>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" >接口状态</label>
 							<div class="controls">
-								<select>
-								  <option>1</option>
-								  <option>2</option>
-								  <option>3</option>
-								  <option>4</option>
-								  <option>5</option>
+								<select name="status" id="status">
+								  <option value="1" <#if entity.status == 1>selected</#if>>准备</option>
+								  <option value="2" <#if entity.status == 2>selected</#if>>开发</option>
+								  <option value="3" <#if entity.status == 3>selected</#if>>调试</option>
+								  <option value="4" <#if entity.status == 4>selected</#if>>测试</option>
+								  <option value="5" <#if entity.status == 5>selected</#if>>稳定</option>
 								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputText">请求方法</label>
+							<div class="controls">
+								<select name="method" id="method">
+								  <option value="1" <#if entity.method == 1>selected</#if>>所有</option>
+								  <option value="2" <#if entity.method == 2>selected</#if>>POST</option>
+								  <option value="3" <#if entity.method == 3>selected</#if>>GET</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputText">接口地址串</label>
+							<div class="controls">
+								<input type="text" id="faceurl" name="faceurl" value="${entity.faceurl}" placeholder="接口地址串" >
+							</div>
+						</div>
+					</section>
+					<legend>附加信息</legend>
+					<section id="romdataB">
+						<div class="control-group">
+							<label class="control-label" for="inputText">接口完整地址串</label>
+							<div class="controls">
+								<input type="text" id="url" name="url" value="${entity.url}" placeholder="接口完整地址串" >
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputText">撰写者</label>
+							<div class="controls">
+								<input type="text" id="inputText" placeholder="撰写者">
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" >接口说明</label>
 							<div class="controls">
-								<select>
-								  <option>1</option>
-								  <option>2</option>
-								  <option>3</option>
-								  <option>4</option>
-								  <option>5</option>
-								</select>
+								<textarea rows="3"></textarea>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputText">接口版本</label>
+							<div class="controls">
+								<input type="text" id="inputText" placeholder="接口版本" >
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputText">返回格式说明</label>
+							<div class="controls">
+								<input type="text" id="inputText" placeholder="返回格式说明">
 							</div>
 						</div>
 					</section>
-					<section id="romdataB">
-						sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />
-					</section>
+					<button class="btn btn-large btn-block btn-primary" type="submit">保存</button>
+					<button class="btn btn-large btn-block" type="button">删除</button>
 				</form>
+				
+					<legend>输入参数</legend>
 				<section id="romdataC">
-					sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />
+				
+				</section>	
+				
+				<legend>返回参数</legend>
+				<section id="romdataD">		
 				</section>
-				<section id="romdataD">
-					sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />sd<br />
-				</section>
+				
+          		</div>
 			</div>
 		</div>
 	</div>

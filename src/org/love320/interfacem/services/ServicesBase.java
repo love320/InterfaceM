@@ -35,10 +35,33 @@ public class ServicesBase {
 	public Map newInfo(Integer id) {
 		String sql = "SELECT * FROM interface WHERE id = ?";
 		try {
-			return resJdbc.queryForMap(sql,id);
+			return resJdbc.queryForMap(sql, id);
 		} catch (Exception e) {
 		}
 		return null;
+	}
+
+	/** 创建接口名 */
+	public int newCreateFace(String name) {
+		// 创建接口
+		String sql = "INSERT INTO `interface` (`name`) VALUES (?);";
+		int id = resJdbc.update(sql, name);
+		// 查询接口id
+		// 使用LAST_INSERT_ID()数据库方式获取新增id （线程是安全的）
+		id = resJdbc
+				.queryForInt("SELECT LAST_INSERT_ID() from interface limit 1");
+		if (id <= 0) {
+			// 使用获取新增最大id，获取新新增id (线程是不安全)
+			id = resJdbc.queryForInt("select max(id) from interface ");
+		}
+		return id;
+	}
+
+	/**保存接口信息*/
+	public int save(String name, Integer id, Integer type, Integer status,
+			String faceurl, String url, Integer method) {
+		String sql = "UPDATE `interface` SET `name`=?, `type`=?, `status`=?, `faceurl`=?, `url`=?, `method`=? WHERE  `id`=? LIMIT 1;";
+		return resJdbc.update(sql,name,type,status,faceurl,url,method,id);
 	}
 
 }

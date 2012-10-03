@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class Interface {
@@ -37,6 +38,24 @@ public class Interface {
 		return "interface/input";
 	}
 	
+	@RequestMapping("/interfacce-save")
+	public ModelAndView  save(String name,
+			@RequestParam(value="id",required=false)Integer id,
+			@RequestParam(value="type",required=false)Integer type,
+			@RequestParam(value="status",required=false)Integer status,
+			@RequestParam(value="faceurl",required=false)String faceurl,
+			@RequestParam(value="url",required=false)String url,
+			@RequestParam(value="method",required=false)Integer method
+			){
+		if(id == null || id <= 0){
+			//创建接口名
+			id = servicesBase.newCreateFace(name);
+			return new ModelAndView("redirect:/interface-input.do?id="+id); 
+		}else{
+			status = servicesBase.save(name, id, type, status, faceurl, url, method);
+			return new ModelAndView("redirect:/interface-list.do?id=1"); 
+		}
+	}
 	
 	
 }
