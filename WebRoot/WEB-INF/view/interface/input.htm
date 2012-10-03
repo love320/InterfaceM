@@ -141,15 +141,47 @@ base=springMacroRequestContext.getContextUrl("")>
 					<button class="btn btn-large btn-block" type="button">删除</button>
 				</form>
 				
-					<legend>输入参数</legend>
+				<legend>输入参数</legend>
 				<section id="romdataC">
-					<form class="form-horizontal" action="${base}/interfacce-save.do"   method="post">
+					
 					<input type="hidden" name="faceid" value="${entity.id}" />
-						<div class="controls controls-row">
-  <input class="span4" type="text" placeholder=".span4">
-  <input class="span1" type="text" placeholder=".span1">
-</div>
+						<form action="${base}/interfacce-save.do"   method="post">
+						<div class="controls ">
+						<select name="method" id="method"  class="span2" >
+								  <option value="1" <#if entity.method == 1>selected</#if>>整形</option>
+								  <option value="2" <#if entity.method == 2>selected</#if>>浮点</option>
+								  <option value="3" <#if entity.method == 3>selected</#if>>字符串</option>
+						</select>
+						 <select name="method" id="method"  class="span2" >
+								  <option value="1" <#if entity.method == 1>selected</#if>>可为空</option>
+								  <option value="2" <#if entity.method == 2>selected</#if>>必需填</option>
+						</select>
+					  <input class="span2" type="text" placeholder="字段名称">
+					  <input class="span2" type="text" placeholder="含义">
+					  <p>
+						  <button class="btn btn-primary" type="button">更新</button>
+						  <button class="btn btn-danger" type="button">删除</button>
+					  </p>
+					</div>
 					</form>
+					<div class="controls ">
+						<select name="method" id="method"  class="span2" >
+								  <option value="1" <#if entity.method == 1>selected</#if>>整形</option>
+								  <option value="2" <#if entity.method == 2>selected</#if>>浮点</option>
+								  <option value="3" <#if entity.method == 3>selected</#if>>字符串</option>
+						</select>
+						 <select name="method" id="method"  class="span2" >
+								  <option value="1" <#if entity.method == 1>selected</#if>>可为空</option>
+								  <option value="2" <#if entity.method == 2>selected</#if>>必需填</option>
+						</select>
+					  <input class="span2" type="text" placeholder="字段名称">
+					  <input class="span2" type="text" placeholder="含义">
+					  <p>
+						  <button class="btn btn-primary" type="button">更新</button>
+						  <button class="btn btn-danger" type="button">删除</button>
+					  </p>
+					</div>
+					<button class="btn" type="button">添加</button>
 				</section>	
 				
 				<legend>返回参数</legend>
@@ -181,7 +213,7 @@ base=springMacroRequestContext.getContextUrl("")>
 	<script src="${base}/js/bootstrap-affix.js"></script>
 	<script src="${base}/js/application.js"></script>
 	<script src="${base}/js/google-code-prettify/prettify.js"></script>
-
+	<script src="${base}/js/love320/love320.js"></script>
 </body>
 </html>
 </#escape>
