@@ -1,2 +1,1393 @@
-/* jTemplates 0.8.3 (http://jtemplates.tpython.com) Copyright (c) 2007-2012 Tomasz Gloc */
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6(3v.b&&!3v.b.3w){(7(b){9 j=7(s,H,m){5.1g=[];5.1D={};5.2J=u;5.1W={};5.1h={};5.m=b.1i({1X:1b,3x:1x,2K:1b,2L:1b,3y:1x,3z:1x},m);5.1E=(5.m.1E!==D)?(5.m.1E):(R.2g);5.13=(5.m.13!==D)?(5.m.13):(R.3A);5.2h=(5.m.2h!==D)?(5.m.2h):((5.m.1X)?(b.2M):(R.2M));6(s==u){c}5.3B(s,H);6(s){5.1F(5.1h[\'2i\'],H,5.m)}5.1h=u};j.4j=\'0.8.3\';j.J=1b;j.3C=4k;j.1y=0;j.z.3B=7(s,H){9 2N=/\\{#1c *(\\w+) *(.*?) *\\}/g,2j,1G,U,1H=u,2O=[],i;2P((2j=2N.4l(s))!==u){1H=2N.1H;1G=2j[1];U=s.1Y(\'{#/1c \'+1G+\'}\',1H);6(U===-1){E p V(\'14: j "\'+1G+\'" 2Q 2k 4m.\');}5.1h[1G]=s.1Z(1H,U);2O[1G]=R.2R(2j[2])}6(1H===u){5.1h[\'2i\']=s;c}K(i 2l 5.1h){6(i!==\'2i\'){5.1W[i]=p j()}}K(i 2l 5.1h){6(i!==\'2i\'){5.1W[i].1F(5.1h[i],b.1i({},H||{},5.1W||{}),b.1i({},5.m,2O[i]));5.1h[i]=u}}};j.z.1F=7(s,H,m){6(s==D){5.1g.x(p 1p(\'\',1,5));c}s=s.15(/[\\n\\r]/g,\'\');s=s.15(/\\{\\*.*?\\*\\}/g,\'\');5.2J=b.1i({},5.1W||{},H||{});5.m=p 2m(m);9 A=5.1g,20=s.1j(/\\{#.*?\\}/g),1d=0,U=0,e,1q=0,i,l;K(i=0,l=(20)?(20.X):(0);i<l;++i){9 Z=20[i];6(1q){U=s.1Y(\'{#/1I}\');6(U===-1){E p V("14: 4n 21 3D 1I.");}6(U>1d){A.x(p 1p(s.1Z(1d,U),1,5))}1d=U+11;1q=0;i=b.4o(\'{#/1I}\',20);22}U=s.1Y(Z,1d);6(U>1d){A.x(p 1p(s.1Z(1d,U),1q,5))}Z.1j(/\\{#([\\w\\/]+).*?\\}/);9 2n=L.$1;2S(2n){B\'4p\':A.2T(Z);F;B\'6\':e=p 1z(A,5);e.2T(Z);A.x(e);A=e;F;B\'W\':A.2U();F;B\'/6\':B\'/K\':B\'/2V\':A=A.2W();F;B\'2V\':e=p 1A(Z,A,5);A.x(e);A=e;F;B\'K\':e=3E(Z,A,5);A.x(e);A=e;F;B\'22\':B\'F\':A.x(p 16(2n));F;B\'2X\':A.x(p 2Y(Z,5.2J,5));F;B\'h\':A.x(p 2Z(Z,5));F;B\'9\':A.x(p 30(Z,5));F;B\'31\':A.x(p 32(Z));F;B\'4q\':A.x(p 1p(\'{\',1,5));F;B\'4r\':A.x(p 1p(\'}\',1,5));F;B\'1I\':1q=1;F;B\'/1I\':6(j.J){E p V("14: 4s 33 3D 1I.");}F;3F:6(j.J){E p V(\'14: 4t 4u: \'+2n+\'.\');}}1d=U+Z.X}6(s.X>1d){A.x(p 1p(s.3G(1d),1q,5))}};j.z.M=7(d,h,q,I){++I;6(I==1&&q!=D){b.34(q,"2o")}9 $T=d,$P,17=\'\';6(5.m.3y){$T=5.1E(d,{2p:(5.m.3x&&I==1),23:5.m.1X},5.13)}6(!5.m.3z){$P=b.1i({},5.1D,h)}W{$P=b.1i({},5.1E(5.1D,{2p:(5.m.2K),23:1b},5.13),5.1E(h,{2p:(5.m.2K&&I==1),23:1b},5.13))}K(9 i=0,l=5.1g.X;i<l;++i){17+=5.1g[i].M($T,$P,q,I)}5.2q=u;--I;c 17};j.z.10=7(){6(5.2q==u){5.2q=p 2r(5)}c 5.2q};j.z.35=7(24,1B){5.1D[24]=1B};R=7(){};R.3A=7(3H){c 3H.15(/&/g,\'&4v;\').15(/>/g,\'&3I;\').15(/</g,\'&3J;\').15(/"/g,\'&4w;\').15(/\'/g,\'&#39;\')};R.2g=7(d,1J,13){6(d==u){c d}2S(d.36){B 2m:9 o={};K(9 i 2l d){o[i]=R.2g(d[i],1J,13)}6(!1J.23){6(d.4x("37")){o.37=d.37}}c o;B 4y:9 a=[];K(9 i=0,l=d.X;i<l;++i){a[i]=R.2g(d[i],1J,13)}c a;B 38:c(1J.2p)?(13(d)):(d);B 3K:6(1J.23){6(j.J){E p V("14: 4z 4A 2k 4B.");}W{c D}}}c d};R.2R=7(2s){6(2s===u||2s===D){c{}}9 o=2s.4C(/[= ]/);6(o[0]===\'\'){o.4D()}9 25={};K(9 i=0,l=o.X;i<l;i+=2){25[o[i]]=o[i+1]}c 25};R.2M=7(G){6(1K G!=="4E"||!G){c u}1k{c(p 3K("c "+b.3L(G)))()}1l(e){6(j.J){E p V("14: 4F 4G");}c{}}};R.3M=7(26,1y,3a){2P(26!=u){9 d=b.G(26,\'2o\');6(d!=D&&d.1y==1y&&d.d[3a]!=D){c d.d[3a]}26=26.4H}c u};9 1p=7(3b,1q,1c){5.27=3b;5.3N=1q;5.O=1c};1p.z.M=7(d,h,q,I){6(5.3N){c 5.27}9 s=5.27;9 18="";9 i=-1;9 28=0;9 29=-1;9 1L=0;2P(1x){9 1M=s.1Y("{",i+1);9 1N=s.1Y("}",i+1);6(1M<0&&1N<0){F}6((1M!=-1&&1M<1N)||(1N==-1)){i=1M;6(++28==1){29=1M;18+=s.1Z(1L,i);1L=-1}}W{i=1N;6(--28===0){6(29>=0){18+=5.O.10().3O(d,h,q,s.1Z(29,1N+1));29=-1;1L=i+1}}W 6(28<0){28=0}}}6(1L>-1){18+=s.3G(1L)}c 18};2r=7(t){5.3c=t};2r.z.3O=7($T,$P,$Q,2t){1k{9 18=3d(2t);6(b.4I(18)){6(5.3c.m.1X||!5.3c.m.2L){c\'\'}18=18($T,$P,$Q)}c(18===D)?(""):(38(18))}1l(e){6(j.J){6(e 1C 16){e.1m="4J"}E e;}c""}};2r.z.19=7($T,$P,$Q,2t){c 3d(2t)};9 1z=7(1O,1r){5.2u=1O;5.1P=1r;5.2a=[];5.1g=[];5.1Q=u};1z.z.x=7(e){5.1Q.x(e)};1z.z.2W=7(){c 5.2u};1z.z.2T=7(N){N.1j(/\\{#(?:W)*6 (.*?)\\}/);5.2a.x(L.$1);5.1Q=[];5.1g.x(5.1Q)};1z.z.2U=7(){5.2a.x(1x);5.1Q=[];5.1g.x(5.1Q)};1z.z.M=7(d,h,q,I){9 17=\'\';1k{K(9 2b=0,3P=5.2a.X;2b<3P;++2b){6(5.1P.10().19(d,h,q,5.2a[2b])){9 t=5.1g[2b];K(9 i=0,l=t.X;i<l;++i){17+=t[i].M(d,h,q,I)}c 17}}}1l(e){6(j.J||(e 1C 16)){E e;}}c 17};3E=7(N,1O,1c){6(N.1j(/\\{#K (\\w+?) *= *(\\S+?) +4K +(\\S+?) *(?:1a=(\\S+?))*\\}/)){9 f=p 1A(u,1O,1c);f.C=L.$1;f.Y={\'33\':(L.$2||0),\'21\':(L.$3||-1),\'1a\':(L.$4||1),\'y\':\'$T\'};f.3e=(7(i){c i});c f}W{E p V(\'14: 4L 4M "3Q": \'+N);}};9 1A=7(N,1O,1c){5.2u=1O;5.O=1c;6(N!=u){N.1j(/\\{#2V +(.+?) +3R +(\\w+?)( .+)*\\}/);5.3S=L.$1;5.C=L.$2;5.Y=L.$3||u;5.Y=R.2R(5.Y)}5.2v=[];5.2w=[];5.3f=5.2v};1A.z.x=7(e){5.3f.x(e)};1A.z.2W=7(){c 5.2u};1A.z.2U=7(){5.3f=5.2w};1A.z.M=7(d,h,q,I){1k{9 1s=(5.3e===D)?(5.O.10().19(d,h,q,5.3S)):(5.3e);6(1s===$){E p V("2c: 4N \'$\' 4O 4P 4Q 3R 3T-7");}9 2d=[];9 1R=1K 1s;6(1R==\'3U\'){9 3g=[];b.1t(1s,7(k,v){2d.x(k);3g.x(v)});1s=3g}9 y=(5.Y.y!==D)?(5.O.10().19(d,h,q,5.Y.y)):((d!=u)?(d):({}));6(y==u){y={}}9 s=2e(5.O.10().19(d,h,q,5.Y.33)||0),e;9 1a=2e(5.O.10().19(d,h,q,5.Y.1a)||1);6(1R!=\'7\'){e=1s.X}W{6(5.Y.21===D||5.Y.21===u){e=2e.4R}W{e=2e(5.O.10().19(d,h,q,5.Y.21))+((1a>0)?(1):(-1))}}9 17=\'\';9 i,l;6(5.Y.2f){9 3h=s+2e(5.O.10().19(d,h,q,5.Y.2f));e=(3h>e)?(e):(3h)}6((e>s&&1a>0)||(e<s&&1a<0)){9 1S=0;9 3V=(1R!=\'7\')?(4S.4T((e-s)/1a)):D;9 1u,1n;9 3i=0;K(;((1a>0)?(s<e):(s>e));s+=1a,++1S,++3i){6(j.J&&3i>j.3C){E p V("2c: 4U 3T 4V 4W 4X");}1u=2d[s];6(1R!=\'7\'){1n=1s[s]}W{1n=1s(s);6(1n===D||1n===u){F}}6((1K 1n==\'7\')&&(5.O.m.1X||!5.O.m.2L)){22}6((1R==\'3U\')&&(1u 2l 2m)&&(1n===2m[1u])){22}9 3W=y[5.C];y[5.C]=1n;y[5.C+\'$3X\']=s;y[5.C+\'$1S\']=1S;y[5.C+\'$3Y\']=(1S===0);y[5.C+\'$3Z\']=(s+1a>=e);y[5.C+\'$40\']=3V;y[5.C+\'$2d\']=(1u!==D&&1u.36==38)?(5.O.13(1u)):(1u);y[5.C+\'$1K\']=1K 1n;K(i=0,l=5.2v.X;i<l;++i){1k{17+=5.2v[i].M(y,h,q,I)}1l(1T){6(1T 1C 16){2S(1T.1m){B\'22\':i=l;F;B\'F\':i=l;s=e;F;3F:E 1T;}}W{E 1T;}}}1v y[5.C+\'$3X\'];1v y[5.C+\'$1S\'];1v y[5.C+\'$3Y\'];1v y[5.C+\'$3Z\'];1v y[5.C+\'$40\'];1v y[5.C+\'$2d\'];1v y[5.C+\'$1K\'];1v y[5.C];y[5.C]=3W}}W{K(i=0,l=5.2w.X;i<l;++i){17+=5.2w[i].M(d,h,q,I)}}c 17}1l(e){6(j.J||(e 1C 16)){E e;}c""}};9 16=7(1m){5.1m=1m};16.z=V;16.z.M=7(d){E 5;};9 2Y=7(N,H,1r){N.1j(/\\{#2X (.*?)(?: 4Y=(.*?))?\\}/);5.O=H[L.$1];6(5.O==D){6(j.J){E p V(\'14: 4Z 3Q 2X: \'+L.$1);}}5.41=L.$2;5.42=1r};2Y.z.M=7(d,h,q,I){1k{c 5.O.M(5.42.10().19(d,h,q,5.41),h,q,I)}1l(e){6(j.J||(e 1C 16)){E e;}}c\'\'};9 2Z=7(N,1r){N.1j(/\\{#h 24=(\\w*?) 1B=(.*?)\\}/);5.C=L.$1;5.27=L.$2;5.1P=1r};2Z.z.M=7(d,h,q,I){1k{h[5.C]=5.1P.10().19(d,h,q,5.27)}1l(e){6(j.J||(e 1C 16)){E e;}h[5.C]=D}c\'\'};9 30=7(N,1r){N.1j(/\\{#9 (.*?)\\}/);5.43=L.$1;5.1P=1r};30.z.M=7(d,h,q,I){1k{6(q==D){c""}9 25=5.1P.10().19(d,h,q,5.43);9 1U=b.G(q,"2o");6(1U==D){1U={1y:(++j.1y),d:[]}}9 i=1U.d.x(25);b.G(q,"2o",1U);c"(R.3M(5,"+1U.1y+","+(i-1)+"))"}1l(e){6(j.J||(e 1C 16)){E e;}c\'\'}};9 32=7(N){N.1j(/\\{#31 50=(.*?)\\}/);5.3j=3d(L.$1);5.3k=5.3j.X;6(5.3k<=0){E p V(\'14: 51 52 K 31\');}5.3l=0;5.3m=-1};32.z.M=7(d,h,q,I){9 3n=b.G(q,\'2x\');6(3n!=5.3m){5.3m=3n;5.3l=0}9 i=5.3l++%5.3k;c 5.3j[i]};b.1e.1F=7(s,H,m){c b(5).1t(7(){9 t=(s&&s.36==j)?s:p j(s,H,m);b.G(5,\'2c\',t);b.G(5,\'2x\',0)})};b.1e.53=7(1V,H,m){9 s=b.2y({1w:1V,2z:\'2A\',2B:1b,1m:\'44\'}).45;c b(5).1F(s,H,m)};b.1e.54=7(3o,H,m){9 s=b(\'#\'+3o).3b();6(s==u){s=b(\'#\'+3o).46();s=s.15(/&3J;/g,"<").15(/&3I;/g,">")}s=b.3L(s);s=s.15(/^<\\!\\[55\\[([\\s\\S]*)\\]\\]>$/47,\'$1\');s=s.15(/^<\\!--([\\s\\S]*)-->$/47,\'$1\');c b(5).1F(s,H,m)};b.1e.56=7(){9 2f=0;b(5).1t(7(){6(b.2C(5)){++2f}});c 2f};b.1e.57=7(){b(5).48();c b(5).1t(7(){b.34(5,\'2c\')})};b.1e.35=7(24,1B){c b(5).1t(7(){9 t=b.2C(5);6(t!=u){t.35(24,1B)}W 6(j.J){E p V(\'14: j 2Q 2k 49.\');}})};b.1e.3p=7(d,h,1o){c b(5).1t(7(){9 t=b.2C(5);6(t!=u){6(1o!=D&&1o.3q){d=t.2h(d)}b.G(5,\'2x\',b.G(5,\'2x\')+1);b(5).46(t.M(d,h,5,0))}W 6(j.J){E p V(\'14: j 2Q 2k 49.\');}})};b.1e.58=7(1V,h,1o){9 12=5;9 o=b.1i({2D:1b},b.59);o=b.1i(o,1o);b.2y({1w:1V,1m:o.1m,G:o.G,4a:o.4a,2B:o.2B,2D:o.2D,4b:o.4b,2z:\'2A\',4c:7(d){9 r=b(12).3p(d,h,{3q:1x});6(o.2E){o.2E(r)}},5a:o.5b,5c:o.5d});c 5};9 3r=7(1w,h,2F,2G,1f,1o){5.4d=1w;5.1D=h;5.4e=2F;5.4f=2G;5.1f=1f;5.4g=u;5.3s=1o||{};9 12=5;b(1f).1t(7(){b.G(5,\'3t\',12)});5.3u()};3r.z.3u=7(){5.1f=b.4h(5.1f,7(2H){c(b.5e(5f.5g,2H.5h?2H[0]:2H))});6(5.1f.X===0){c}9 12=5;b.2y({1w:5.4d,2z:\'2A\',G:5.4f,2D:1b,4c:7(d){1k{9 r=b(12.1f).3p(d,12.1D,{3q:1x});6(12.3s.2E){12.3s.2E(r)}}1l(1T){}}});5.4g=5i(7(){12.3u()},5.4e)};b.1e.5j=7(1w,h,2F,2G,1o){c p 3r(1w,h,2F,2G,5,1o)};b.1e.48=7(){c b(5).1t(7(){9 2I=b.G(5,\'3t\');6(2I==u){c}9 12=5;2I.1f=b.4h(2I.1f,7(o){c o!=12});b.34(5,\'3t\')})};b.1i({3w:7(s,H,m){c p j(s,H,m)},5k:7(1V,H,m){9 s=b.2y({1w:1V,2z:\'2A\',2B:1b,1m:\'44\'}).45;c p j(s,H,m)},2C:7(q){c b.G(q,\'2c\')},5l:7(1c,G,4i){c 1c.M(G,4i,D,0)},5m:7(1B){j.J=1B}})})(b)};',62,333,'|||||this|if|function||var||jQuery|return|||||param||Template|||settings|||new|element||||null|||push|extData|prototype|node|case|_name|undefined|throw|break|data|includes|deep|DEBUG_MODE|for|RegExp|get|oper|_template|||TemplateUtils|||se|Error|else|length|_option|this_op|getBin||that|f_escapeString|jTemplates|replace|JTException|ret|result|evaluate|step|false|template|ss|fn|objs|_tree|_templates_code|extend|match|try|catch|type|cval|options|TextNode|literalMode|templ|fcount|each|ckey|delete|url|true|guid|opIF|opFOREACH|value|instanceof|_param|f_cloneData|setTemplate|tname|lastIndex|literal|filter|typeof|sExpr|lm|rm|par|_templ|_curr|mode|iteration|ex|refobj|url_|_templates|disallow_functions|indexOf|substring|op|end|continue|noFunc|name|obj|el|_value|nested|sText|_cond|ci|jTemplate|key|Number|count|cloneData|f_parseJSON|MAIN|iter|not|in|Object|op_|jTemplatesRef|escapeData|EvalObj|EvalClass|optionText|__value|_parent|_onTrue|_onFalse|jTemplateSID|ajax|dataType|text|async|getTemplate|cache|on_success|interval|args|elem|updater|_includes|filter_params|runnable_functions|parseJSON|reg|_template_settings|while|is|optionToObject|switch|addCond|switchToElse|foreach|getParent|include|Include|UserParam|UserVariable|cycle|Cycle|begin|removeData|setParam|constructor|toString|String||id|val|__templ|eval|_runFunc|_currentState|arr|tmp|loopCounter|_values|_length|_index|_lastSessionID|sid|elementName|processTemplate|StrToJSON|Updater|_options|jTemplateUpdater|run|window|createTemplate|filter_data|clone_data|clone_params|escapeHTML|splitTemplates|FOREACH_LOOP_LIMIT|of|opFORFactory|default|substr|txt|gt|lt|Function|trim|ReturnRefValue|_literalMode|evaluateContent|cl|find|as|_arg|loop|object|_total|prevValue|index|first|last|total|_root|_mainTempl|_id|GET|responseText|html|im|processTemplateStop|defined|dataFilter|timeout|success|_url|_interval|_args|timer|grep|parameter|version|10000|exec|closed|No|inArray|elseif|ldelim|rdelim|Missing|unknown|tag|amp|quot|hasOwnProperty|Array|Functions|are|allowed|split|shift|string|Invalid|JSON|parentNode|isFunction|subtemplate|to|Operator|failed|Variable|cannot|be|used|MAX_VALUE|Math|ceil|Foreach|limit|was|exceed|root|Cannot|values|no|elements|setTemplateURL|setTemplateElement|CDATA|hasTemplate|removeTemplate|processTemplateURL|ajaxSettings|error|on_error|complete|on_complete|contains|document|body|jquery|setTimeout|processTemplateStart|createTemplateURL|processTemplateToText|jTemplatesDebugMode'.split('|'),0,{}))
+/**
+ * jTemplates 0.8.3 (http://jtemplates.tpython.com)
+ * Copyright (c) 2007-2012 Tomasz Gloc (http://www.tpython.com)
+ * 
+ * Dual licensed under the MIT (MIT-LICENSE.txt)
+ * and/or GPL (GPL-LICENSE.txt) licenses.
+ *
+ * Id: $Id: jquery-jtemplates_uncompressed.js 198 2012-08-05 13:08:08Z tom $
+ */
+
+ /**
+ * @fileOverview Template engine in JavaScript.
+ * @name jTemplates
+ * @author Tomasz Gloc
+ * @date $Date: 2012-08-05 15:08:08 +0200 (N, 05 sie 2012) $
+ */
+
+if (window.jQuery && !window.jQuery.createTemplate) {(function (jQuery) {
+
+	/**
+	 * [abstract]
+	 * @name BaseNode
+	 * @class Abstract node. [abstract]
+	 */
+
+	/**
+	 * Process node and get the html string. [abstract]
+	 * @name get
+	 * @function
+	 * @param {object} d data
+	 * @param {object} param parameters
+	 * @param {Element} element a HTML element
+	 * @param {Number} deep
+	 * @return {String}
+	 * @memberOf BaseNode
+	 */
+
+	/**
+	 * [abstract]
+	 * @name BaseArray
+	 * @augments BaseNode
+	 * @class Abstract array/collection. [abstract]
+	 */
+
+	/**
+	 * Add node 'e' to array.
+	 * @name push
+	 * @function
+	 * @param {BaseNode} e a node
+	 * @memberOf BaseArray
+	 */
+
+	/**
+	 * See (http://jquery.com/).
+	 * @name jQuery
+	 * @class jQuery Library (http://jquery.com/)
+	 */
+
+	/**
+	 * See (http://jquery.com/)
+	 * @name fn
+	 * @class jQuery Library (http://jquery.com/)
+	 * @memberOf jQuery
+	 */
+
+	/**
+	 * Create new template from string s.
+	 * @name Template
+	 * @class A template or multitemplate.
+	 * @param {string} s A template string (like: "Text: {$T.txt}.").
+	 * @param {array} [includes] Array of included templates.
+	 * @param {object} [settings] Settings.
+	 * @config {boolean} [disallow_functions] Do not allow use function in data (default: true).
+	 * @config {boolean} [filter_data] Enable filter data using escapeHTML (default: true).
+	 * @config {boolean} [filter_params] Enable filter parameters using escapeHTML (default: false).
+	 * @config {boolean} [runnable_functions] Automatically run function (from data) inside {} [default: false].
+	 * @config {boolean} [clone_data] Clone input data [default: true]
+	 * @config {boolean} [clone_params] Clone input parameters [default: true]
+	 * @config {Function} [f_cloneData] Function used to data cloning
+	 * @config {Function} [f_escapeString] Function used to escape strings
+	 * @config {Function} [f_parseJSON] Function used to parse JSON
+	 * @augments BaseNode
+	 */
+	var Template = function (s, includes, settings) {
+		this._tree = [];
+		this._param = {};
+		this._includes = null;
+		this._templates = {};
+		this._templates_code = {};
+		
+		//default parameters
+		this.settings = jQuery.extend({
+			disallow_functions: false,
+			filter_data: true,
+			filter_params: false,
+			runnable_functions: false,
+			clone_data: true,
+			clone_params: true
+		}, settings);
+		
+		//set handlers
+		this.f_cloneData = (this.settings.f_cloneData !== undefined) ? (this.settings.f_cloneData) : (TemplateUtils.cloneData);
+		this.f_escapeString = (this.settings.f_escapeString !== undefined) ? (this.settings.f_escapeString) : (TemplateUtils.escapeHTML);
+		this.f_parseJSON = (this.settings.f_parseJSON !== undefined) ? (this.settings.f_parseJSON) : ((this.settings.disallow_functions) ? (jQuery.parseJSON) : (TemplateUtils.parseJSON));
+		
+		if(s == null) {
+			return;
+		}
+		
+		//split multiteplate
+		this.splitTemplates(s, includes);
+		
+		if(s) {
+			//set main template
+			this.setTemplate(this._templates_code['MAIN'], includes, this.settings);
+		}
+		
+		this._templates_code = null;
+	};
+	
+	/**
+	 * jTemplates version
+	 * @type string
+	 */
+	Template.version = '0.8.3';
+	
+	/**
+	 * Debug mode (all errors are on), default: off
+	 * @type Boolean
+	 */
+	Template.DEBUG_MODE = false;
+	
+	/**
+	 * Foreach loop limit (enable only when DEBUG_MODE = true)
+	 * @type integer
+	 */
+	Template.FOREACH_LOOP_LIMIT = 10000;
+	
+	/**
+	 * Global guid
+	 * @type integer
+	 */
+	Template.guid = 0;
+	
+	/**
+	 * Split multitemplate into multiple templates.
+	 * @param {string} s A template string (like: "Text: {$T.txt}.").
+	 * @param {array} includes Array of included templates.
+	 */
+	Template.prototype.splitTemplates = function (s, includes) {
+		var reg = /\{#template *(\w+) *(.*?) *\}/g, //split multitemplate into subtemplates
+			iter, tname, se, lastIndex = null, _template_settings = [], i;
+		
+		//while find new subtemplate
+		while((iter = reg.exec(s)) !== null) {
+			lastIndex = reg.lastIndex;
+			tname = iter[1];
+			se = s.indexOf('{#/template ' + tname + '}', lastIndex);
+			if(se === -1) {
+				throw new Error('jTemplates: Template "' + tname + '" is not closed.');
+			}
+			//save a subtemplate and parse options
+			this._templates_code[tname] = s.substring(lastIndex, se);
+			_template_settings[tname] = TemplateUtils.optionToObject(iter[2]);
+		}
+		//when no subtemplates, use all as main template
+		if(lastIndex === null) {
+			this._templates_code['MAIN'] = s;
+			return;
+		}
+		
+		//create a new object for every subtemplates
+		for(i in this._templates_code) {
+			if(i !== 'MAIN') {
+				this._templates[i] = new Template();
+			}
+		}
+		for(i in this._templates_code) {
+			if(i !== 'MAIN') {
+				this._templates[i].setTemplate(this._templates_code[i],
+					jQuery.extend({}, includes || {}, this._templates || {}),
+					jQuery.extend({}, this.settings, _template_settings[i]));
+				this._templates_code[i] = null;
+			}
+		}
+	};
+	
+	/**
+	 * Parse template. (should be template, not multitemplate).
+	 * @param {string} s A template string (like: "Text: {$T.txt}.").
+	 * @param {array} includes Array of included templates.
+	 * @param {object} [settings] Settings.
+	 */
+	Template.prototype.setTemplate = function (s, includes, settings) {
+		if(s == undefined) {
+			this._tree.push(new TextNode('', 1, this));
+			return;
+		}
+		s = s.replace(/[\n\r]/g, ''); //remove endlines
+		s = s.replace(/\{\*.*?\*\}/g, ''); //remove comments
+		this._includes = jQuery.extend({}, this._templates || {}, includes || {});
+		this.settings = new Object(settings);
+		var node = this._tree,
+			op = s.match(/\{#.*?\}/g), //find operators
+			ss = 0, se = 0, e, literalMode = 0, i, l;
+		
+		//loop operators
+		for(i=0, l=(op)?(op.length):(0); i<l; ++i) {
+			var this_op = op[i];
+			
+			//when literal mode is on, treat operator like a text
+			if(literalMode) {
+				se = s.indexOf('{#/literal}');
+				if(se === -1) {
+					throw new Error("jTemplates: No end of literal.");
+				}
+				if(se > ss) {
+					node.push(new TextNode(s.substring(ss, se), 1, this));
+				}
+				ss = se + 11;
+				literalMode = 0;
+				i = jQuery.inArray('{#/literal}', op);
+				continue;
+			}
+			
+			se = s.indexOf(this_op, ss);
+			if(se > ss) {
+				node.push(new TextNode(s.substring(ss, se), literalMode, this));
+			}
+			this_op.match(/\{#([\w\/]+).*?\}/); //find operator name
+			var op_ = RegExp.$1;
+			switch(op_) {
+				case 'elseif':
+					node.addCond(this_op);
+					break;
+				case 'if':
+					e = new opIF(node, this);
+					e.addCond(this_op);
+					node.push(e);
+					node = e;
+					break;
+				case 'else':
+					node.switchToElse();
+					break;
+				case '/if':
+				case '/for':
+				case '/foreach':
+					node = node.getParent();
+					break;
+				case 'foreach':
+					e = new opFOREACH(this_op, node, this);
+					node.push(e);
+					node = e;
+					break;
+				case 'for':
+					e = opFORFactory(this_op, node, this);
+					node.push(e);
+					node = e;
+					break;
+				case 'continue':
+				case 'break':
+					node.push(new JTException(op_));
+					break;
+				case 'include':
+					node.push(new Include(this_op, this._includes, this));
+					break;
+				case 'param':
+					node.push(new UserParam(this_op, this));
+					break;
+				case 'var':
+					node.push(new UserVariable(this_op, this));
+					break;
+				case 'cycle':
+					node.push(new Cycle(this_op));
+					break;
+				case 'ldelim':
+					node.push(new TextNode('{', 1, this));
+					break;
+				case 'rdelim':
+					node.push(new TextNode('}', 1, this));
+					break;
+				case 'literal':
+					literalMode = 1;
+					break;
+				case '/literal':
+					if(Template.DEBUG_MODE) {
+						throw new Error("jTemplates: Missing begin of literal.");
+					}
+					break;
+				default:
+					if(Template.DEBUG_MODE) {
+						throw new Error('jTemplates: unknown tag: ' + op_ + '.');
+					}
+			}
+	
+			ss = se + this_op.length;
+		}
+	
+		if(s.length > ss) {
+			node.push(new TextNode(s.substr(ss), literalMode, this));
+		}
+	};
+	
+	/**
+	 * Process template and get the html string.
+	 * @param {object} d data
+	 * @param {object} param parameters
+	 * @param {Element} element a HTML element
+	 * @param {Number} deep
+	 * @return {String}
+	 */
+	Template.prototype.get = function (d, param, element, deep) {
+		++deep;
+		
+		if (deep == 1 && element != undefined) {
+			jQuery.removeData(element, "jTemplatesRef");
+		}
+		
+		var $T = d, $P, ret = '';
+		
+		//create clone of data
+		if(this.settings.clone_data) {
+			$T = this.f_cloneData(d, {escapeData: (this.settings.filter_data && deep == 1), noFunc: this.settings.disallow_functions}, this.f_escapeString);
+		}
+		
+		//create clone of parameters
+		if(!this.settings.clone_params) {
+			$P = jQuery.extend({}, this._param, param);
+		} else {
+			$P = jQuery.extend({},
+				this.f_cloneData(this._param, {escapeData: (this.settings.filter_params), noFunc: false}, this.f_escapeString),
+				this.f_cloneData(param, {escapeData: (this.settings.filter_params && deep == 1), noFunc: false}, this.f_escapeString));
+		}
+		
+		for(var i=0, l=this._tree.length; i<l; ++i) {
+			ret += this._tree[i].get($T, $P, element, deep);
+		}
+		
+		this.EvalObj = null;
+		
+		--deep;
+		return ret;
+	};
+	
+	/**
+	 * Create and return EvalClass object
+	 * @return {EvalClass}
+	 */
+	Template.prototype.getBin = function () {
+		if(this.EvalObj == null) {
+			this.EvalObj = new EvalClass(this);
+		}
+		return this.EvalObj;
+	};
+	
+	/**
+	 * Set to parameter 'name' value 'value'.
+	 * @param {string} name
+	 * @param {object} value
+	 */
+	Template.prototype.setParam = function (name, value) {
+		this._param[name] = value;
+	};
+
+
+	/**
+	 * Template utilities.
+	 * @namespace Template utilities.
+	 */
+	TemplateUtils = function () {
+	};
+	
+	/**
+	 * Replace chars &, >, <, ", ' with html entities.
+	 * To disable function set settings: filter_data=false, filter_params=false
+	 * @param {string} string
+	 * @return {string}
+	 * @static
+	 * @memberOf TemplateUtils
+	 */
+	TemplateUtils.escapeHTML = function (txt) {
+		return txt.replace(/&/g,'&amp;').replace(/>/g,'&gt;').replace(/</g,'&lt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+	};
+
+	/**
+	 * Make a copy od data 'd'. It also filters data (depend on 'filter').
+	 * @param {object} d input data
+	 * @param {object} filter a filters
+	 * @config {boolean} [escapeData] Use escapeHTML on every string.
+	 * @config {boolean} [noFunc] Do not allow to use function (throws exception).
+	 * @param {Function} f_escapeString function using to filter string (usually: TemplateUtils.escapeHTML)
+	 * @return {object} output data (filtered)
+	 * @static
+	 * @memberOf TemplateUtils
+	 */
+	TemplateUtils.cloneData = function (d, filter, f_escapeString) {
+		if(d == null) {
+			return d;
+		}
+		switch(d.constructor) {
+			case Object:
+				var o = {};
+				for(var i in d) {
+					o[i] = TemplateUtils.cloneData(d[i], filter, f_escapeString);
+				}
+				if(!filter.noFunc) {
+					if(d.hasOwnProperty("toString")) {
+						o.toString = d.toString;
+					}
+				}
+				return o;
+			case Array:
+				var a = [];
+				for(var i=0,l=d.length; i<l; ++i) {
+					a[i] = TemplateUtils.cloneData(d[i], filter, f_escapeString);
+				}
+				return a;
+			case String:
+				return (filter.escapeData) ? (f_escapeString(d)) : (d);
+			case Function:
+				if(filter.noFunc) {
+					if(Template.DEBUG_MODE) {
+						throw new Error("jTemplates: Functions are not allowed.");
+					}
+					else {
+						return undefined;
+					}
+				}
+		}
+		return d;
+	};
+	
+	/**
+	 * Convert text-based option string to Object
+	 * @param {string} optionText text-based option string
+	 * @return {Object}
+	 * @static
+	 * @memberOf TemplateUtils
+	 */
+	TemplateUtils.optionToObject = function (optionText) {
+		if(optionText === null || optionText === undefined) {
+			return {};
+		}
+		
+		var o = optionText.split(/[= ]/);
+		if(o[0] === '') {
+			o.shift();
+		}
+		
+		var obj = {};
+		for(var i=0, l=o.length; i<l; i+=2) {
+			obj[o[i]] = o[i+1];
+		}
+		
+		return obj;
+	};
+	
+	/**
+	 * Parse JSON string into object
+	 * @param {string} data Text JSON
+	 * @return {Object}
+	 * @static
+	 */
+	TemplateUtils.parseJSON = function (data) {
+		if ( typeof data !== "string" || !data ) {
+			return null;
+		}
+		try {
+			return (new Function("return " + jQuery.trim(data)))();
+		} catch(e) {
+			if(Template.DEBUG_MODE) {
+				throw new Error("jTemplates: Invalid JSON");
+			}
+			return {};
+		}
+	};
+	
+	/**
+	 * Find parents nodes for a reference value and return it
+	 * @param {Element} el html element
+	 * @param {int} guid template process unique identificator
+	 * @param {int} id index
+	 * @return {object}
+	 * @static
+	 */
+	TemplateUtils.ReturnRefValue = function (el, guid, id) {
+		//search element with stored data
+		while(el != null) {
+			var d = jQuery.data(el, 'jTemplatesRef');
+			if(d != undefined && d.guid == guid && d.d[id] != undefined) {
+				return d.d[id];
+			}
+			el = el.parentNode;
+		}
+		return null;
+	};
+	
+	/**
+	 * Create a new text node.
+	 * @name TextNode
+	 * @class All text (block {..}) between control's block "{#..}".
+	 * @param {string} val text string
+	 * @param {boolean} literalMode When enable (true) template does not process blocks {..}.
+	 * @param {Template} Template object
+	 * @augments BaseNode
+	 */
+	var TextNode = function (val, literalMode, template) {
+		this._value = val;
+		this._literalMode = literalMode;
+		this._template = template;
+	};
+	
+	/**
+	 * Get the html string for a text node.
+	 * @param {object} d data
+	 * @param {object} param parameters
+	 * @param {Element} element a HTML element
+	 * @param {Number} deep
+	 * @return {String}
+	 */
+	TextNode.prototype.get = function (d, param, element, deep) {
+		if(this._literalMode) {
+			return this._value;
+		}
+		var s = this._value;
+		var result = "";
+		var i = -1;
+		var nested = 0;
+		var sText = -1;
+		var sExpr = 0;
+		while(true) {
+			var lm = s.indexOf("{", i+1);
+			var rm = s.indexOf("}", i+1);
+			if(lm < 0 && rm < 0) {
+				break;
+			}
+			if((lm != -1 && lm < rm) || (rm == -1)) {
+				i = lm;
+				if(++nested == 1) {
+					sText = lm;
+					result += s.substring(sExpr, i);
+					sExpr = -1;
+				}
+			} else {
+				i = rm;
+				if(--nested === 0) {
+					if(sText >= 0) {
+						result += this._template.getBin().evaluateContent(d, param, element, s.substring(sText, rm+1));
+						sText = -1;
+						sExpr = i+1;
+					}
+				} else if(nested < 0) {
+					nested = 0;
+				}
+			}
+		}
+		if(sExpr > -1) {
+			result += s.substr(sExpr);
+		}
+		return result;
+	};
+	
+	/**
+	 * Virtual context for eval() (internal class)
+	 * @name EvalClass
+	 * @class Virtual bin for eval() evaluation
+	 * @param {Template} t template
+	 * @private
+	 */
+	EvalClass = function (t) {
+		this.__templ = t;
+	};
+	
+	/**
+	 * Evaluate expression (template content)
+	 * @param {object} $T data
+	 * @param {object} $P parameters
+	 * @param {object} $Q element
+	 * @param {String} __value Template content
+	 * @return {String}
+	 */
+	EvalClass.prototype.evaluateContent = function ($T, $P, $Q, __value) {
+		try {
+			var result = eval(__value);
+			
+			if(jQuery.isFunction(result)) {
+				if(this.__templ.settings.disallow_functions || !this.__templ.settings.runnable_functions) {
+					return '';
+				}
+				result = result($T, $P, $Q);
+			}
+			return (result === undefined) ? ("") : (String(result));
+		} catch(e) {
+			if(Template.DEBUG_MODE) {
+				if(e instanceof JTException) {
+					e.type = "subtemplate";
+				}
+				throw e;
+			}
+			return "";
+		}
+	};
+	
+	/**
+	 * Evaluate expression (simple eval)
+	 * @param {object} $T data
+	 * @param {object} $P parameters
+	 * @param {object} $Q element
+	 * @param {String} __value content to evaluate
+	 * @return {String}
+	 */
+	EvalClass.prototype.evaluate = function ($T, $P, $Q, __value) {
+		return eval(__value);
+	};
+	
+	/**
+	 * Create a new conditional node.
+	 * @name opIF
+	 * @class A class represent: {#if}.
+	 * @param {object} par parent node
+	 * @param {Template} templ template
+	 * @augments BaseArray
+	 */
+	var opIF = function (par, templ) {
+		this._parent = par;
+		this._templ = templ;
+		this._cond = []; //conditions
+		this._tree = []; //conditions subtree
+		this._curr = null; //current subtree
+	};
+	
+	/**
+	 * Add node 'e' to array.
+	 * @param {BaseNode} e a node
+	 */
+	opIF.prototype.push = function (e) {
+		this._curr.push(e);
+	};
+	
+	/**
+	 * Get a parent node.
+	 * @return {BaseNode}
+	 */
+	opIF.prototype.getParent = function () {
+		return this._parent;
+	};
+	
+	/**
+	 * Add condition
+	 * @param {string} oper content of operator {#..}
+	 */
+	opIF.prototype.addCond = function (oper) {
+		oper.match(/\{#(?:else)*if (.*?)\}/);
+		this._cond.push(RegExp.$1);
+		this._curr = [];
+		this._tree.push(this._curr);
+	};
+	
+	/**
+	 * Switch to else
+	 */
+	opIF.prototype.switchToElse = function () {
+		this._cond.push(true); //else is the last condition and its always true
+		this._curr = [];
+		this._tree.push(this._curr);
+	};
+	
+	/**
+	 * Process node depend on conditional and get the html string.
+	 * @param {object} d data
+	 * @param {object} param parameters
+	 * @param {Element} element a HTML element
+	 * @param {Number} deep
+	 * @return {String}
+	 */
+	opIF.prototype.get = function (d, param, element, deep) {
+		var ret = ''; //result
+		
+		try {
+			//foreach condition
+			for(var ci=0, cl=this._cond.length; ci<cl; ++ci) {
+				//if condition is true
+				if(this._templ.getBin().evaluate(d, param, element, this._cond[ci])) {
+					//execute and exit
+					var t = this._tree[ci];
+					for(var i=0, l=t.length; i<l; ++i) {
+						ret += t[i].get(d, param, element, deep);
+					}
+					return ret;
+				}
+			}
+		} catch(e) {
+			if(Template.DEBUG_MODE || (e instanceof JTException)) {
+				throw e;
+			}
+		}
+		return ret;
+	};
+	
+	/**
+	 * Handler for a tag 'FOR'. Create new and return relative opFOREACH object.
+	 * @name opFORFactory
+	 * @class Handler for a tag 'FOR'. Create new and return relative opFOREACH object.
+	 * @param {string} oper content of operator {#..}
+	 * @param {object} par parent node
+	 * @param {Template} template a pointer to Template object
+	 * @return {opFOREACH}
+	 */
+	opFORFactory = function (oper, par, template) {
+		//create operator FOREACH with function as iterator
+		if(oper.match(/\{#for (\w+?) *= *(\S+?) +to +(\S+?) *(?:step=(\S+?))*\}/)) {
+			var f = new opFOREACH(null, par, template);
+			f._name = RegExp.$1;
+			f._option = {'begin': (RegExp.$2 || 0), 'end': (RegExp.$3 || -1), 'step': (RegExp.$4 || 1), 'extData': '$T'};
+			f._runFunc = (function (i){return i;});
+			return f;
+		} else {
+			throw new Error('jTemplates: Operator failed "find": ' + oper);
+		}
+	};
+	
+	/**
+	 * Create a new loop node.
+	 * @name opFOREACH
+	 * @class A class represent: {#foreach}.
+	 * @param {string} oper content of operator {#..}
+	 * @param {object} par parent node
+	 * @param {Template} template a pointer to Template object
+	 * @augments BaseArray
+	 */
+	var opFOREACH = function (oper, par, template) {
+		this._parent = par;
+		this._template = template;
+		if(oper != null) {
+			oper.match(/\{#foreach +(.+?) +as +(\w+?)( .+)*\}/);
+			this._arg = RegExp.$1;
+			this._name = RegExp.$2;
+			this._option = RegExp.$3 || null;
+			this._option = TemplateUtils.optionToObject(this._option);
+		}
+		
+		this._onTrue = [];
+		this._onFalse = [];
+		this._currentState = this._onTrue;
+		//this._runFunc = null;
+	};
+	
+	/**
+	 * Add node 'e' to array.
+	 * @param {BaseNode} e
+	 */
+	opFOREACH.prototype.push = function (e) {
+		this._currentState.push(e);
+	};
+	
+	/**
+	 * Get a parent node.
+	 * @return {BaseNode}
+	 */
+	opFOREACH.prototype.getParent = function () {
+		return this._parent;
+	};
+	
+	/**
+	 * Switch from collection onTrue to onFalse.
+	 */
+	opFOREACH.prototype.switchToElse = function () {
+		this._currentState = this._onFalse;
+	};
+	
+	/**
+	 * Process loop and get the html string.
+	 * @param {object} d data
+	 * @param {object} param parameters
+	 * @param {Element} element a HTML element
+	 * @param {Number} deep
+	 * @return {String}
+	 */
+	opFOREACH.prototype.get = function (d, param, element, deep) {
+		try {
+			//array of elements in foreach (or function)
+			var fcount = (this._runFunc === undefined) ? (this._template.getBin().evaluate(d, param, element, this._arg)) : (this._runFunc);
+			if(fcount === $) {
+				throw new Error("jTemplate: Variable '$' cannot be used as loop-function");
+			}
+			var key = [];	//only for objects
+			var mode = typeof fcount;
+			if(mode == 'object') {
+				//transform object to array
+				var arr = [];
+				jQuery.each(fcount, function (k, v) {
+					key.push(k);
+					arr.push(v);
+				});
+				fcount = arr;
+			}
+			//setup primary iterator, iterator can get data from options (using by operator FOR) or from data "$T"
+			var extData = (this._option.extData !== undefined) ? (this._template.getBin().evaluate(d, param, element, this._option.extData)) : ((d != null) ? (d) : ({}));
+			if(extData == null) {
+				extData = {};
+			}
+			//start, end and step
+			var s = Number(this._template.getBin().evaluate(d, param, element, this._option.begin) || 0), e;	//start, end
+			var step = Number(this._template.getBin().evaluate(d, param, element, this._option.step) || 1);
+			if(mode != 'function') {
+				e = fcount.length;
+			} else {
+				if(this._option.end === undefined || this._option.end === null) {
+					e = Number.MAX_VALUE;
+				} else {
+					e = Number(this._template.getBin().evaluate(d, param, element, this._option.end)) + ((step>0) ? (1) : (-1));
+				}
+			}
+			var ret = '';	//result string
+			var i,l;	//local iterators
+			
+			if(this._option.count) {
+				//limit number of loops
+				var tmp = s + Number(this._template.getBin().evaluate(d, param, element, this._option.count));
+				e = (tmp > e) ? (e) : (tmp);
+			}
+			
+			if((e>s && step>0) || (e<s && step<0)) {
+				var iteration = 0;
+				var _total = (mode != 'function') ? (Math.ceil((e-s)/step)) : undefined;
+				var ckey, cval;	//current key, current value
+				var loopCounter = 0;
+				for(; ((step>0) ? (s<e) : (s>e)); s+=step, ++iteration, ++loopCounter) {
+					if(Template.DEBUG_MODE && loopCounter > Template.FOREACH_LOOP_LIMIT) {
+						throw new Error("jTemplate: Foreach loop limit was exceed");
+					}
+					ckey = key[s];
+					if(mode != 'function') {
+						cval = fcount[s];  //get value from array
+					} else {
+						cval = fcount(s);  //calc function
+						//if no result from function then stop foreach
+						if(cval === undefined || cval === null) {
+							break;
+						}
+					}
+					if((typeof cval == 'function') && (this._template.settings.disallow_functions || !this._template.settings.runnable_functions)) {
+						continue;
+					}
+					if((mode == 'object') && (ckey in Object) && (cval === Object[ckey])) {
+						continue;
+					}
+					//backup on value
+					var prevValue = extData[this._name];
+					//set iterator properties
+					extData[this._name] = cval;
+					extData[this._name + '$index'] = s;
+					extData[this._name + '$iteration'] = iteration;
+					extData[this._name + '$first'] = (iteration === 0);
+					extData[this._name + '$last'] = (s+step >= e);
+					extData[this._name + '$total'] = _total;
+					extData[this._name + '$key'] = (ckey !== undefined && ckey.constructor == String) ? (this._template.f_escapeString(ckey)) : (ckey);
+					extData[this._name + '$typeof'] = typeof cval;
+					for(i=0, l=this._onTrue.length; i<l; ++i) {
+						try {
+							ret += this._onTrue[i].get(extData, param, element, deep);
+						} catch(ex) {
+							if(ex instanceof JTException) {
+								switch(ex.type) {
+									case 'continue':
+										i = l; //force skip to next node
+										break;
+									case 'break':
+										i = l;  //force skip to next node
+										s = e;  //force skip outsite foreach
+										break;
+									default:
+										throw ex;
+								}
+							} else {
+								throw ex;
+							}
+						}
+					}
+					//restore values
+					delete extData[this._name + '$index'];
+					delete extData[this._name + '$iteration'];
+					delete extData[this._name + '$first'];
+					delete extData[this._name + '$last'];
+					delete extData[this._name + '$total'];
+					delete extData[this._name + '$key'];
+					delete extData[this._name + '$typeof'];
+					delete extData[this._name];
+					extData[this._name] = prevValue;
+				}
+			} else {
+				//no items to loop ("foreach->else")
+				for(i=0, l=this._onFalse.length; i<l; ++i) {
+					ret += this._onFalse[i].get(d, param, element, deep);
+				}
+			}
+			return ret;
+		} catch(e) {
+			if(Template.DEBUG_MODE || (e instanceof JTException)) {
+				throw e;
+			}
+			return "";
+		}
+	};
+	
+	/**
+	 * Template-control exceptions
+	 * @name JTException
+	 * @class A class used internals for a template-control exceptions
+	 * @param type {string} Type of exception
+	 * @augments Error
+	 * @augments BaseNode
+	 */
+	var JTException = function (type) {
+		this.type = type;
+	};
+	JTException.prototype = Error;
+	
+	/**
+	 * Throw a template-control exception
+	 * @throws It throws itself
+	 */
+	JTException.prototype.get = function (d) {
+		throw this;
+	};
+	
+	/**
+	 * Create a new entry for included template.
+	 * @name Include
+	 * @class A class represent: {#include}.
+	 * @param {string} oper content of operator {#..}
+	 * @param {array} includes
+	 * @param {Template} templ template
+	 * @augments BaseNode
+	 */
+	var Include = function (oper, includes, templ) {
+		oper.match(/\{#include (.*?)(?: root=(.*?))?\}/);
+		this._template = includes[RegExp.$1];
+		if(this._template == undefined) {
+			if(Template.DEBUG_MODE) {
+				throw new Error('jTemplates: Cannot find include: ' + RegExp.$1);
+			}
+		}
+		this._root = RegExp.$2;
+		this._mainTempl = templ;
+	};
+	
+	/**
+	 * Run method get on included template.
+	 * @param {object} d data
+	 * @param {object} param parameters
+	 * @param {Element} element a HTML element
+	 * @param {Number} deep
+	 * @return {String}
+	 */
+	Include.prototype.get = function (d, param, element, deep) {
+		try {
+			//run a subtemplates with a new root node
+			return this._template.get(this._mainTempl.getBin().evaluate(d, param, element, this._root), param, element, deep);
+		} catch(e) {
+			if(Template.DEBUG_MODE || (e instanceof JTException)) {
+				throw e;
+			}
+		}
+		return '';
+	};
+	
+	/**
+	 * Create new node for {#param}.
+	 * @name UserParam
+	 * @class A class represent: {#param}.
+	 * @param {string} oper content of operator {#..}
+	 * @param {Template} templ template
+	 * @augments BaseNode
+	 */
+	var UserParam = function (oper, templ) {
+		oper.match(/\{#param name=(\w*?) value=(.*?)\}/);
+		this._name = RegExp.$1;
+		this._value = RegExp.$2;
+		this._templ = templ;
+	};
+	
+	/**
+	 * Return value of selected parameter.
+	 * @param {object} d data
+	 * @param {object} param parameters
+	 * @param {Element} element a HTML element
+	 * @param {Number} deep
+	 * @return {String} empty string
+	 */
+	UserParam.prototype.get = function (d, param, element, deep) {
+		try {
+			param[this._name] = this._templ.getBin().evaluate(d, param, element, this._value);
+		} catch(e) {
+			if(Template.DEBUG_MODE || (e instanceof JTException)) {
+				throw e;
+			}
+			param[this._name] = undefined;
+		}
+		return '';
+	};
+	
+	/**
+	 * Create new node for {#var}.
+	 * @name UserVariable
+	 * @class A class represent: {#var}.
+	 * @param {string} oper content of operator {#..}
+	 * @param {Template} templ template
+	 * @augments BaseNode
+	 */
+	var UserVariable = function (oper, templ) {
+		oper.match(/\{#var (.*?)\}/);
+		this._id = RegExp.$1;
+		this._templ = templ;
+	};
+	
+	/**
+	 * Return value of selected variable.
+	 * @param {object} d data
+	 * @param {object} param parameters
+	 * @param {Element} element a HTML element
+	 * @param {Number} deep
+	 * @return {String} calling of function ReturnRefValue (as text string)
+	 */
+	UserVariable.prototype.get = function (d, param, element, deep) {
+		try {
+			if(element == undefined) {
+				return "";
+			}
+			var obj = this._templ.getBin().evaluate(d, param, element, this._id);
+			var refobj = jQuery.data(element, "jTemplatesRef");
+			if(refobj == undefined) {
+				refobj = {guid:(++Template.guid), d:[]};
+			}
+			var i = refobj.d.push(obj);
+			jQuery.data(element, "jTemplatesRef", refobj);
+			return "(TemplateUtils.ReturnRefValue(this," + refobj.guid + "," + (i-1) + "))";
+		} catch(e) {
+			if(Template.DEBUG_MODE || (e instanceof JTException)) {
+				throw e;
+			}
+			return '';
+		}
+	};
+	
+	/**
+	 * Create a new cycle node.
+	 * @name Cycle
+	 * @class A class represent: {#cycle}.
+	 * @param {string} oper content of operator {#..}
+	 * @augments BaseNode
+	 */
+	var Cycle = function (oper) {
+		oper.match(/\{#cycle values=(.*?)\}/);
+		this._values = eval(RegExp.$1);
+		this._length = this._values.length;
+		if(this._length <= 0) {
+			throw new Error('jTemplates: no elements for cycle');
+		}
+		this._index = 0;
+		this._lastSessionID = -1;
+	};
+
+	/**
+	 * Do a step on cycle and return value.
+	 * @param {object} d data
+	 * @param {object} param parameters
+	 * @param {Element} element a HTML element
+	 * @param {Number} deep
+	 * @return {String}
+	 */
+	Cycle.prototype.get = function (d, param, element, deep) {
+		var sid = jQuery.data(element, 'jTemplateSID');
+		if(sid != this._lastSessionID) {
+			this._lastSessionID = sid;
+			this._index = 0;
+		}
+		var i = this._index++ % this._length;
+		return this._values[i];
+	};
+	
+	
+	/**
+	 * Add a Template to HTML Elements.
+	 * @param {Template/string} s a Template or a template string
+	 * @param {array} [includes] Array of included templates.
+	 * @param {object} [settings] Settings (see Template)
+	 * @return {jQuery} chainable jQuery class
+	 * @memberOf jQuery.fn
+	 */
+	jQuery.fn.setTemplate = function (s, includes, settings) {
+		return jQuery(this).each(function () {
+			var t = (s && s.constructor == Template) ? s : new Template(s, includes, settings);
+			jQuery.data(this, 'jTemplate', t);
+			jQuery.data(this, 'jTemplateSID', 0);
+		});
+	};
+	
+	/**
+	 * Add a Template (from URL) to HTML Elements.
+	 * @param {string} url_ URL to template
+	 * @param {array} [includes] Array of included templates.
+	 * @param {object} [settings] Settings (see Template)
+	 * @return {jQuery} chainable jQuery class
+	 * @memberOf jQuery.fn
+	 */
+	jQuery.fn.setTemplateURL = function (url_, includes, settings) {
+		var s = jQuery.ajax({
+			url: url_,
+			dataType: 'text',
+			async: false,
+			type: 'GET'
+		}).responseText;
+		
+		return jQuery(this).setTemplate(s, includes, settings);
+	};
+	
+	/**
+	 * Create a Template from element's content.
+	 * @param {string} elementName an ID of element
+	 * @param {array} [includes] Array of included templates.
+	 * @param {object} [settings] Settings (see Template)
+	 * @return {jQuery} chainable jQuery class
+	 * @memberOf jQuery.fn
+	 */
+	jQuery.fn.setTemplateElement = function (elementName, includes, settings) {
+		var s = jQuery('#' + elementName).val();
+		if(s == null) {
+			s = jQuery('#' + elementName).html();
+			s = s.replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+		}
+		
+		s = jQuery.trim(s);
+		s = s.replace(/^<\!\[CDATA\[([\s\S]*)\]\]>$/im, '$1');
+		s = s.replace(/^<\!--([\s\S]*)-->$/im, '$1');
+		
+		return jQuery(this).setTemplate(s, includes, settings);
+	};
+	
+	/**
+	 * Check it HTML Elements have a template. Return count of templates.
+	 * @return {number} Number of templates.
+	 * @memberOf jQuery.fn
+	 */
+	jQuery.fn.hasTemplate = function () {
+		var count = 0;
+		jQuery(this).each(function () {
+			if(jQuery.getTemplate(this)) {
+				++count;
+			}
+		});
+		return count;
+	};
+	
+	/**
+	 * Remote Template from HTML Element(s)
+	 * @return {jQuery} chainable jQuery class
+	 */
+	jQuery.fn.removeTemplate = function () {
+		jQuery(this).processTemplateStop();
+		return jQuery(this).each(function () {
+			jQuery.removeData(this, 'jTemplate');
+		});
+	};
+	
+	/**
+	 * Set to parameter 'name' value 'value'.
+	 * @param {string} name
+	 * @param {object} value
+	 * @return {jQuery} chainable jQuery class
+	 * @memberOf jQuery.fn
+	 */
+	jQuery.fn.setParam = function (name, value) {
+		return jQuery(this).each(function () {
+			var t = jQuery.getTemplate(this);
+			if(t != null) {
+				t.setParam(name, value);
+			} else if(Template.DEBUG_MODE) {
+				throw new Error('jTemplates: Template is not defined.');
+			}
+		});
+	};
+	
+	/**
+	 * Process template using data 'd' and parameters 'param'. Update HTML code.
+	 * @param {object} d data 
+	 * @param {object} [param] parameters
+	 * @option {object} [options] internal use only
+	 * @return {jQuery} chainable jQuery class
+	 * @memberOf jQuery.fn
+	 */
+	jQuery.fn.processTemplate = function (d, param, options) {
+		return jQuery(this).each(function () {
+			var t = jQuery.getTemplate(this);
+			if(t != null) {
+				if(options != undefined && options.StrToJSON) {
+					d = t.f_parseJSON(d);
+				}
+				jQuery.data(this, 'jTemplateSID', jQuery.data(this, 'jTemplateSID') + 1);
+				jQuery(this).html(t.get(d, param, this, 0));
+			} else if(Template.DEBUG_MODE) {
+				throw new Error('jTemplates: Template is not defined.');
+			}
+		});
+	};
+	
+	/**
+	 * Process template using data from URL 'url_' (only format JSON) and parameters 'param'. Update HTML code.
+	 * @param {string} url_ URL to data (in JSON)
+	 * @param {object} [param] parameters
+	 * @param {object} options options (over ajaxSettings) and callbacks
+	 * @return {jQuery} chainable jQuery class
+	 * @memberOf jQuery.fn
+	 */
+	jQuery.fn.processTemplateURL = function (url_, param, options) {
+		var that = this;
+		
+		var o = jQuery.extend({cache: false}, jQuery.ajaxSettings);
+		o = jQuery.extend(o, options);
+
+		jQuery.ajax({
+			url: url_,
+			type: o.type,
+			data: o.data,
+			dataFilter: o.dataFilter,
+			async: o.async,
+			cache: o.cache,
+			timeout: o.timeout,
+			dataType: 'text',
+			success: function (d) {
+				var r = jQuery(that).processTemplate(d, param, {StrToJSON:true});
+				if(o.on_success) {
+					o.on_success(r);
+				}
+			},
+			error: o.on_error,
+			complete: o.on_complete
+		});
+		return this;
+	};
+
+	/**
+	 * Create new Updater.
+	 * @name Updater
+	 * @class This class is used for 'Live Refresh!'.
+	 * @param {string} url A destination URL
+	 * @param {object} param Parameters (for template)
+	 * @param {number} interval Time refresh interval
+	 * @param {object} args Additional URL parameters (in URL alter ?) as assoc array.
+	 * @param {array} objs An array of HTMLElement which will be modified by Updater.
+	 * @param {object} options options and callbacks
+	 */
+	var Updater = function (url, param, interval, args, objs, options) {
+		this._url = url;
+		this._param = param;
+		this._interval = interval;
+		this._args = args;
+		this.objs = objs;
+		this.timer = null;
+		this._options = options || {};
+		
+		var that = this;
+		jQuery(objs).each(function () {
+			jQuery.data(this, 'jTemplateUpdater', that);
+		});
+		this.run();
+	};
+	
+	/**
+	 * Create new HTTP request to server, get data (as JSON) and send it to templates. Also check does HTMLElements still exists in Document.
+	 */
+	Updater.prototype.run = function () {
+		//remove deleted node
+		this.objs = jQuery.grep(this.objs, function (elem) {
+			return (jQuery.contains(document.body, elem.jquery ? elem[0] : elem));
+		});
+		//if no node then do nothing
+		if(this.objs.length === 0) {
+			return;
+		}
+		//ajax call
+		var that = this;
+		jQuery.ajax({
+			url: this._url,
+			dataType: 'text',
+			data: this._args,
+			cache: false,
+			success: function (d) {
+				try {
+					var r = jQuery(that.objs).processTemplate(d, that._param, {StrToJSON:true});
+					if(that._options.on_success) {
+						that._options.on_success(r); //callback
+					}
+				} catch(ex) {}
+			}
+		});
+		//schedule next run
+		this.timer = setTimeout(function (){that.run();}, this._interval);
+	};
+	
+	/**
+	 * Start 'Live Refresh!'.
+	 * @param {string} url A destination URL
+	 * @param {object} param Parameters (for template)
+	 * @param {number} interval Time refresh interval
+	 * @param {object} args Additional URL parameters (in URL alter ?) as assoc array.
+	 * @param {object} options options and callbacks
+	 * @return {Updater} an Updater object
+	 * @memberOf jQuery.fn
+	 */
+	jQuery.fn.processTemplateStart = function (url, param, interval, args, options) {
+		return new Updater(url, param, interval, args, this, options);
+	};
+	
+	/**
+	 * Stop 'Live Refresh!'.
+	 * @return {jQuery} chainable jQuery class
+	 * @memberOf jQuery.fn
+	 */
+	jQuery.fn.processTemplateStop = function () {
+		return jQuery(this).each(function () {
+			var updater = jQuery.data(this, 'jTemplateUpdater');
+			if(updater == null) {
+				return;
+			}
+			var that = this;
+			updater.objs = jQuery.grep(updater.objs, function (o) {
+				return o != that;
+			});
+			jQuery.removeData(this, 'jTemplateUpdater');
+		});
+	};
+	
+	jQuery.extend(/** @scope jQuery.prototype */{
+		/**
+		 * Create new Template.
+		 * @param {string} s A template string (like: "Text: {$T.txt}.").
+		 * @param {array} includes Array of included templates.
+		 * @param {object} settings Settings. (see Template)
+		 * @return {Template}
+		 */
+		createTemplate: function (s, includes, settings) {
+			return new Template(s, includes, settings);
+		},
+		
+		/**
+		 * Create new Template from URL.
+		 * @param {string} url_ URL to template
+		 * @param {array} includes Array of included templates.
+		 * @param {object} settings Settings. (see Template)
+		 * @return {Template}
+		 */
+		createTemplateURL: function (url_, includes, settings) {
+			var s = jQuery.ajax({
+				url: url_,
+				dataType: 'text',
+				async: false,
+				type: 'GET'
+			}).responseText;
+			
+			return new Template(s, includes, settings);
+		},
+		
+		/**
+		 * Get a Template for HTML node
+		 * @param {Element} HTML node
+		 * @return {Template} a Template or "undefined"
+		 */
+		getTemplate: function (element) {
+			return jQuery.data(element, 'jTemplate');
+		},
+		
+		/**
+		 * Process template and return text content.
+		 * @param {Template} template A Template
+		 * @param {object} data data
+		 * @param {object} param parameters
+		 * @return {string} Content of template
+		 */
+		processTemplateToText: function (template, data, parameter) {
+			return template.get(data, parameter, undefined, 0);
+		},
+		
+		/**
+		 * Set Debug Mode
+		 * @param {Boolean} value
+		 */
+		jTemplatesDebugMode: function (value) {
+			Template.DEBUG_MODE = value;
+		}
+	});
+	
+})(jQuery);};

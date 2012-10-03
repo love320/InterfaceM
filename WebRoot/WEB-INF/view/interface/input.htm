@@ -144,13 +144,14 @@ base=springMacroRequestContext.getContextUrl("")>
 				<legend>输入参数</legend>
 				<section id="romdataC">
 					
-					<input type="hidden" name="faceid" value="${entity.id}" />
-					<input type="hidden" name="parasaveurl" value="${base}/interfacce-save.do" />
-					<input type="hidden" name="paralisturl" value="${base}/interfacce-list.do" />
+					<input type="hidden" name="faceid" id="faceid" value="${entity.id}" />
+					<input type="hidden" name="parasaveurl" id="parasaveurl" value="${base}/interfacce-save.do" />
+					<input type="hidden" name="paralisturl"  id="paralisturl"  value="${base}/parameter-list.do" />
 					
 					<div style="display:none">
-						{#foreach $T.Items as Item}
-						<div class="controls" id="Template-Items">
+						<textarea id="Template-Items" rows="0" cols="0"><!--
+						{#foreach $T.Lists as Item}
+						<div class="controls">
 						<select name="method" id="method"  class="span2" >
 								  <option value="1" >整形</option>
 								  <option value="2" >浮点</option>
@@ -163,11 +164,13 @@ base=springMacroRequestContext.getContextUrl("")>
 					  <input class="span2" type="text" placeholder="字段名称">
 					  <input class="span2" type="text" placeholder="含义">
 					  <p>
-						  <button class="btn btn-primary" type="button">更新</button>
+						  <button class="btn btn-primary" type="button">更 {$T.row.Id}  新</button>
 						  <button class="btn btn-danger" type="button">删除</button>
 					  </p>
 					</div>
-					 {#/for}
+					{#/for}
+					--></textarea>
+					 
 					 </div>
 					
 					<div id="paradiv"></div>

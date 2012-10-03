@@ -1,6 +1,9 @@
 package org.love320.interfacem.controllers;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.love320.interfacem.services.ParameterServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +23,10 @@ public class Parameter {
 	public @ResponseBody  Object list(Model model){
 		List list = parameterServices.newListAll();
 		Gson gson = new Gson();
-		return gson.toJson(list);
+		Map dataMap = new HashMap();
+		dataMap.put("Lists", list);
+		System.out.println(">>");
+		return gson.toJson(dataMap);
 	}
 	
 	

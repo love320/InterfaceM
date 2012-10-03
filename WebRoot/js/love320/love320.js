@@ -1,7 +1,16 @@
 //冰迪
 $(function(){
 	 //set template and process
-    $("#Items").setTemplateElement("Template-Items").processTemplateURL($("#paralisturl").attr("value"));
+	var paralisturl = $("#paralisturl").attr("value");
+    $("#paradiv").setTemplateElement("Template-Items").processTemplateURL(paralisturl);
+	
+	/*$.getJSON(paralisturl, function(json){
+		 // 设置模板  
+          $("#paradiv").setTemplateElement("Template-Items");  
+          // 处理模板  
+          $("#paradiv").processTemplate(json);  
+		});
+	*/
 });
 
 function parameterSavePost(data){
