@@ -145,16 +145,20 @@ base=springMacroRequestContext.getContextUrl("")>
 				<section id="romdataC">
 					
 					<input type="hidden" name="faceid" value="${entity.id}" />
-						<form action="${base}/interfacce-save.do"   method="post">
-						<div class="controls ">
+					<input type="hidden" name="parasaveurl" value="${base}/interfacce-save.do" />
+					<input type="hidden" name="paralisturl" value="${base}/interfacce-list.do" />
+					
+					<div style="display:none">
+						{#foreach $T.Items as Item}
+						<div class="controls" id="Template-Items">
 						<select name="method" id="method"  class="span2" >
-								  <option value="1" <#if entity.method == 1>selected</#if>>整形</option>
-								  <option value="2" <#if entity.method == 2>selected</#if>>浮点</option>
-								  <option value="3" <#if entity.method == 3>selected</#if>>字符串</option>
+								  <option value="1" >整形</option>
+								  <option value="2" >浮点</option>
+								  <option value="3" >字符串</option>
 						</select>
 						 <select name="method" id="method"  class="span2" >
-								  <option value="1" <#if entity.method == 1>selected</#if>>可为空</option>
-								  <option value="2" <#if entity.method == 2>selected</#if>>必需填</option>
+								  <option value="1" >可为空</option>
+								  <option value="2" >必需填</option>
 						</select>
 					  <input class="span2" type="text" placeholder="字段名称">
 					  <input class="span2" type="text" placeholder="含义">
@@ -163,24 +167,10 @@ base=springMacroRequestContext.getContextUrl("")>
 						  <button class="btn btn-danger" type="button">删除</button>
 					  </p>
 					</div>
-					</form>
-					<div class="controls ">
-						<select name="method" id="method"  class="span2" >
-								  <option value="1" <#if entity.method == 1>selected</#if>>整形</option>
-								  <option value="2" <#if entity.method == 2>selected</#if>>浮点</option>
-								  <option value="3" <#if entity.method == 3>selected</#if>>字符串</option>
-						</select>
-						 <select name="method" id="method"  class="span2" >
-								  <option value="1" <#if entity.method == 1>selected</#if>>可为空</option>
-								  <option value="2" <#if entity.method == 2>selected</#if>>必需填</option>
-						</select>
-					  <input class="span2" type="text" placeholder="字段名称">
-					  <input class="span2" type="text" placeholder="含义">
-					  <p>
-						  <button class="btn btn-primary" type="button">更新</button>
-						  <button class="btn btn-danger" type="button">删除</button>
-					  </p>
-					</div>
+					 {#/for}
+					 </div>
+					
+					<div id="paradiv"></div>
 					<button class="btn" type="button">添加</button>
 				</section>	
 				
@@ -198,6 +188,7 @@ base=springMacroRequestContext.getContextUrl("")>
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="${base}/js/jquery.js"></script>
+	<script src="${base}/js/jquery-jtemplates.js"></script>
 	<script src="${base}/js/bootstrap-transition.js"></script>
 	<script src="${base}/js/bootstrap-alert.js"></script>
 	<script src="${base}/js/bootstrap-modal.js"></script>

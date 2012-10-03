@@ -20,5 +20,6 @@
 	<classpathentry kind="lib" path="packlib/commons-pool-1.6.jar"/>
 	<classpathentry kind="lib" path="packlib/mysql-connector-java-5.1.13.jar"/>
 	<classpathentry kind="lib" path="packlib/freemarker.jar"/>
+	<classpathentry kind="lib" path="packlib/gson-2.2.2.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
