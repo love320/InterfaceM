@@ -14,13 +14,31 @@ $(function(){
 	
 });
 
-function parameterSavePost(data){
+function parameterAdd(){
+	$("#paradiv").append($("#Template-ItemsAdd").clone(true));
+
+}
+
+function btnAction(obj){
+	var jobj = $(obj);
+	parameterSavePost(jobj.parent().parent());
+}
+
+function parameterSavePost(obj){
+	var jobj = $(obj);
+	var faceid = $("#faceid").attr("value");
+	var id = jobj.find("#paraid").attr("value");
+	var type = jobj.find("#type").attr("value");
+	var isnull = jobj.find("#isnull").attr("value");
+	var name = jobj.find("#name").attr("value");
+	var nametext = jobj.find("#nametext").attr("value");
+	
 	$.ajax({
 		   type: "POST",
 		   url: $("#parasaveurl").attr("value"),
-		   data: data,
+		   data: { id:id,faceid:faceid,type: type, isnull:isnull,name:name,nametext:nametext },
 		   success: function(msg){
-		     alert( "Data Saved: " + msg );
+		     //alert( "Data Saved: " + msg );
 		   }
 		});
 }

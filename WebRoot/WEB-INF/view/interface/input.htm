@@ -145,13 +145,15 @@ base=springMacroRequestContext.getContextUrl("")>
 				<section id="romdataC">
 					
 					<input type="hidden" name="faceid" id="faceid" value="${entity.id}" />
-					<input type="hidden" name="parasaveurl" id="parasaveurl" value="${base}/interfacce-save.do" />
+					<input type="hidden" name="parasaveurl" id="parasaveurl" value="${base}/parameter-save.do" />
 					<input type="hidden" name="paralisturl"  id="paralisturl"  value="${base}/parameter-list.do" />
 					
 					<div style="display:none">
 						<textarea id="Template-Items" rows="0" cols="0"><!--
 						{#foreach $T.Lists as Item}
 						<div class="controls">
+						<input type="hidden" name="paraid" id="paraid" value="{$T.Item.id}" />
+						
 						<select name="type" id="type"  class="span2" >
 								  <option value="1" {#if $T.Item.type == 1} selected {#/if}  >整形</option>
 								  <option value="2"  {#if $T.Item.type == 2} selected {#/if} >浮点</option>
@@ -164,17 +166,35 @@ base=springMacroRequestContext.getContextUrl("")>
 					  <input class="span2" type="text" name="name" id="name" value="{$T.Item.name}" placeholder="字段名称">
 					  <input class="span2" type="text" name="nametext" id="nametext" value="{$T.Item.nametext}"  placeholder="含义">
 					  <p>
-						  <button class="btn btn-primary" type="button">更 {$T.row.Id}  新</button>
+						  <button class="btn btn-primary" type="button" onclick="btnAction(this);">更 {$T.row.Id}  新</button>
 						  <button class="btn btn-danger" type="button">删除</button>
 					  </p>
 					</div>
 					{#/for}
 					--></textarea>
 					 
+					 <div class="controls" id="Template-ItemsAdd">
+					 <input type="hidden" name="paraid" id="paraid" value="0" />
+						<select name="type" id="type"  class="span2" >
+								  <option value="1" selected >整形</option>
+								  <option value="2">浮点</option>
+								  <option value="3" >字符串</option>
+						</select>
+						 <select name="isnull" id="isnull"  class="span2" >
+								  <option value="1">可为空</option>
+								  <option value="2" >必需填</option>
+						</select>
+					  <input class="span2" type="text" name="name" id="name" placeholder="字段名称">
+					  <input class="span2" type="text" name="nametext" id="nametext"   placeholder="含义">
+					  <p>
+						  <button class="btn btn-primary" type="button" onclick="btnAction(this);">保存</button>
+					  </p>
+					</div>
+					 
 					 </div>
 					
 					<div id="paradiv"></div>
-					<button class="btn" type="button">添加</button>
+					<button class="btn" type="button" onclick="parameterAdd();">添加</button>
 				</section>	
 				
 				<legend>返回参数</legend>

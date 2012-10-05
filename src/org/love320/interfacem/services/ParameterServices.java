@@ -15,6 +15,20 @@ public class ParameterServices extends ServicesBase {
 		String sql = "SELECT * FROM parameter";
 		return resJdbc.queryForList(sql);
 	}
+
+	public int newSave(Integer id,Integer faceid, Integer type, Integer isnull, String name,
+			String nametext) {
+		String sql = "";
+		int num = 0;
+		if(id > 0 ){
+			sql = "UPDATE `parameter` SET `faceid`=?, `type`=?, `name`=?, `nametext`=?, `isnull`=? WHERE  `id`=? LIMIT 1;";
+			num = resJdbc.update(sql,faceid,type,name,nametext,isnull,id);
+		}else{
+			sql = "INSERT INTO `parameter` (`faceid`, `type`, `name`, `nametext`, `isnull`) VALUES (?,?,?,?,?);";
+			num = resJdbc.update(sql,faceid,type,name,nametext,isnull);
+		}
+		return num;
+	}
 	
 	
 	

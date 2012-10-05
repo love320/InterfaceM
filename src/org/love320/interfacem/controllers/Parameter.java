@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
@@ -25,8 +26,16 @@ public class Parameter {
 		Gson gson = new Gson();
 		Map dataMap = new HashMap();
 		dataMap.put("Lists", list);
-		System.out.println(">>");
+		System.out.println(">>"+list);
 		return gson.toJson(dataMap);
+	}
+	
+	@RequestMapping("/parameter-save")
+	public @ResponseBody Object save(Model model,Integer id,Integer faceid,Integer type,Integer isnull,@RequestParam(value="",required=false)String name,@RequestParam(value="",required=false)String nametext){
+		System.out.println(">>>"+ id+""+faceid+""+ type+""+ isnull+""+ name+""+ nametext);
+		int stauts = parameterServices.newSave(id,faceid,type, isnull, name, nametext);
+		
+		return null;
 	}
 	
 	
