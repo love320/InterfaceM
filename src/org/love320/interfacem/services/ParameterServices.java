@@ -29,6 +29,11 @@ public class ParameterServices extends ServicesBase {
 		}
 		return num;
 	}
+
+	public List newListById(Integer id) {
+		String sql = "SELECT * FROM parameter where faceid = ?";
+		return resJdbc.queryForList(sql,id);
+	}
 	
 	
 	

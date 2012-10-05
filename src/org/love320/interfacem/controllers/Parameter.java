@@ -21,22 +21,19 @@ public class Parameter {
 	private ParameterServices parameterServices; 
 	
 	@RequestMapping("/parameter-list")
-	public @ResponseBody  Object list(Model model){
-		List list = parameterServices.newListAll();
+	public @ResponseBody  Object list(Model model,Integer id){
+		//List list = parameterServices.newListAll();
+		List list = parameterServices.newListById(id);
 		Gson gson = new Gson();
 		Map dataMap = new HashMap();
 		dataMap.put("Lists", list);
-		System.out.println(">>"+list);
 		return gson.toJson(dataMap);
 	}
 	
 	@RequestMapping("/parameter-save")
 	public @ResponseBody Object save(Model model,Integer id,Integer faceid,Integer type,Integer isnull,@RequestParam(value="",required=false)String name,@RequestParam(value="",required=false)String nametext){
-		System.out.println(">>>"+ id+""+faceid+""+ type+""+ isnull+""+ name+""+ nametext);
 		int stauts = parameterServices.newSave(id,faceid,type, isnull, name, nametext);
-		
-		return null;
+		return 1;
 	}
-	
 	
 }
