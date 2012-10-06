@@ -33,7 +33,17 @@ public class Parameter {
 	@RequestMapping("/parameter-save")
 	public @ResponseBody Object save(Model model,Integer id,Integer faceid,Integer type,Integer isnull,@RequestParam(value="",required=false)String name,@RequestParam(value="",required=false)String nametext){
 		int stauts = parameterServices.newSave(id,faceid,type, isnull, name, nametext);
-		return 1;
+		Map objectMap = new HashMap();
+		objectMap.put("code",1);
+		objectMap.put("id", stauts);
+		Gson gson = new Gson();
+		return gson.toJson(objectMap);
+	}
+	
+	@RequestMapping("/parameter-delete")
+	public @ResponseBody Object delete(Integer id){
+		int stauts = parameterServices.newDelete(id);
+		return null;
 	}
 	
 }

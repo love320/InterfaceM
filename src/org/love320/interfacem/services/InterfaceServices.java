@@ -14,14 +14,14 @@ public class InterfaceServices extends ServicesBase {
 
 	/** 获取接口组名列表 */
 	public List newFaceGroup() {
-		String sql = "SELECT  `id`,  `name`,  `type`,  `status`,  LEFT(`text`, 256) as text,  `createtime` FROM `interfacegroup`";
+		String sql = "SELECT  `id`,  `name`,  `type`,  `status`,  LEFT(`text`, 256) as text,  `createtime` FROM `interfacegroup` order by id asc";
 		return resJdbc.queryForList(sql);
 	}
 
 	/** 获取指定组接口列表 */
 	public List newFaceList(Integer id) {
 		String sql = "SELECT * FROM interface ";
-		sql += " where groupid = ?";
+		sql += " where groupid = ? order by id asc";
 		return resJdbc.queryForList(sql, id);
 	}
 

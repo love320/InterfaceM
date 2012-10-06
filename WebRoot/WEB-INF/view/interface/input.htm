@@ -137,8 +137,8 @@ base=springMacroRequestContext.getContextUrl("")>
 							</div>
 						</div>
 					</section>
-					<button class="btn btn-large btn-block btn-primary" type="submit">保存</button>
-					<button class="btn btn-large btn-block" type="button">删除</button>
+					<button class="btn btn-large btn-block btn-primary"  type="submit">保存</button>
+					<button class="btn btn-large btn-block"  type="button">删除</button>
 				</form>
 				
 				<legend>输入参数</legend>
@@ -146,6 +146,7 @@ base=springMacroRequestContext.getContextUrl("")>
 					
 					<input type="hidden" name="faceid" id="faceid" value="${entity.id}" />
 					<input type="hidden" name="parasaveurl" id="parasaveurl" value="${base}/parameter-save.do" />
+					<input type="hidden" name="paradeleteurl" id="paradeleteurl" value="${base}/parameter-delete.do" />
 					<input type="hidden" name="paralisturl"  id="paralisturl"  value="${base}/parameter-list.do" />
 					
 					<div style="display:none">
@@ -166,8 +167,8 @@ base=springMacroRequestContext.getContextUrl("")>
 					  <input class="span2" type="text" name="name" id="name" value="{$T.Item.name}" placeholder="字段名称">
 					  <input class="span2" type="text" name="nametext" id="nametext" value="{$T.Item.nametext}"  placeholder="含义">
 					  <p>
-						  <button class="btn btn-primary" type="button" onclick="btnAction(this);">保存</button>
-						  <button class="btn btn-danger" type="button">删除</button>
+						  <button class="btn btn-primary" type="button" data-loading-text="处理中..." onclick="btnAction(this);">更新</button>
+						  <button class="btn btn-danger" onclick="parameterDelete(this);" type="button">删除</button>
 					  </p>
 					</div>
 					{#/for}
@@ -187,7 +188,8 @@ base=springMacroRequestContext.getContextUrl("")>
 					  <input class="span2" type="text" name="name" id="name" placeholder="字段名称">
 					  <input class="span2" type="text" name="nametext" id="nametext"   placeholder="含义">
 					  <p>
-						  <button class="btn btn-primary" type="button" onclick="btnAction(this);">保存</button>
+						  <button class="btn btn-primary" type="button" data-loading-text="处理中..." onclick="btnAction(this);">新增</button>
+						  <button class="btn btn-danger" onclick="parameterDelete(this);" type="button" style="display: none;">删除</button>
 					  </p>
 					</div>
 					 
