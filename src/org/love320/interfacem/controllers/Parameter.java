@@ -21,9 +21,9 @@ public class Parameter {
 	private ParameterServices parameterServices; 
 	
 	@RequestMapping("/parameter-list")
-	public @ResponseBody  Object list(Model model,Integer id){
+	public @ResponseBody  Object list(Model model,Integer id,Integer species){
 		//List list = parameterServices.newListAll();
-		List list = parameterServices.newListById(id);
+		List list = parameterServices.newListByIdAndSuperior(id,species);
 		Gson gson = new Gson();
 		Map dataMap = new HashMap();
 		dataMap.put("Lists", list);
@@ -31,8 +31,8 @@ public class Parameter {
 	}
 	
 	@RequestMapping("/parameter-save")
-	public @ResponseBody Object save(Model model,Integer id,Integer faceid,Integer type,Integer isnull,@RequestParam(value="",required=false)String name,@RequestParam(value="",required=false)String nametext){
-		int stauts = parameterServices.newSave(id,faceid,type, isnull, name, nametext);
+	public @ResponseBody Object save(Model model,Integer id,Integer species,Integer faceid,Integer superior,Integer type,Integer isnull,@RequestParam(value="",required=false)String name,@RequestParam(value="",required=false)String nametext){
+		int stauts = parameterServices.newSave(id,species,faceid,superior,type, isnull, name, nametext);
 		Map objectMap = new HashMap();
 		objectMap.put("code",1);
 		objectMap.put("id", stauts);

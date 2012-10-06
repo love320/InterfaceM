@@ -154,7 +154,9 @@ base=springMacroRequestContext.getContextUrl("")>
 						{#foreach $T.Lists as Item}
 						<div class="controls">
 						<input type="hidden" name="paraid" id="paraid" value="{$T.Item.id}" />
-						
+						<input type="hidden" name="superior" id="superior" value="{$T.Item.superior}" />
+						<input type="hidden" name="species" id="species" value="{$T.Item.species}" />
+						{#for index = 1 to $T.Item.level}<i class="icon-minus"></i>{#/for}  
 						<select name="type" id="type"  class="span2" >
 								  <option value="1" {#if $T.Item.type == 1} selected {#/if}  >整形</option>
 								  <option value="2"  {#if $T.Item.type == 2} selected {#/if} >浮点</option>
@@ -169,6 +171,7 @@ base=springMacroRequestContext.getContextUrl("")>
 					  <p>
 						  <button class="btn btn-primary" type="button" data-loading-text="处理中..." onclick="btnAction(this);">更新</button>
 						  <button class="btn btn-danger" onclick="parameterDelete(this);" type="button">删除</button>
+						  <button class="btn" type="button" onclick="parameterAddchild(this);">添加子级</button>
 					  </p>
 					</div>
 					{#/for}
@@ -176,13 +179,15 @@ base=springMacroRequestContext.getContextUrl("")>
 					 
 					 <div class="controls" id="Template-ItemsAdd">
 					 <input type="hidden" name="paraid" id="paraid" value="0" />
+					 <input type="hidden" name="superior" id="superior" value="0" />
+					 <input type="hidden" name="species" id="species" value="0" />
 						<select name="type" id="type"  class="span2" >
 								  <option value="1" selected >整形</option>
 								  <option value="2">浮点</option>
 								  <option value="3" >字符串</option>
 						</select>
 						 <select name="isnull" id="isnull"  class="span2" >
-								  <option value="1">可为空</option>
+								  <option value="1" selected>可为空</option>
 								  <option value="2" >必需填</option>
 						</select>
 					  <input class="span2" type="text" name="name" id="name" placeholder="字段名称">
@@ -190,17 +195,20 @@ base=springMacroRequestContext.getContextUrl("")>
 					  <p>
 						  <button class="btn btn-primary" type="button" data-loading-text="处理中..." onclick="btnAction(this);">新增</button>
 						  <button class="btn btn-danger" onclick="parameterDelete(this);" type="button" style="display: none;">删除</button>
+						  <button class="btn" type="button" onclick="parameterAddchild(this);" style="display: none;">添加子级</button>
 					  </p>
 					</div>
 					 
 					 </div>
 					
 					<div id="paradiv"></div>
-					<button class="btn" type="button" onclick="parameterAdd();">添加</button>
+					<button class="btn" type="button" onclick="parameterAdd(this,1);">添加</button>
 				</section>	
 				
 				<legend>返回参数</legend>
-				<section id="romdataD">		
+				<section id="romdataD">	
+					<div id="paraReturndiv"></div>	
+					<button class="btn" type="button" onclick="parameterAdd(this,2);">添加</button>
 				</section>
 				
           		</div>
