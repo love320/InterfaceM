@@ -40,7 +40,7 @@ public class Interface {
 		return "interface/input";
 	}
 	
-	@RequestMapping("/interfacce-save")
+	@RequestMapping("/interface-save")
 	public ModelAndView  save(String name,Integer groupid,
 			@RequestParam(value="id",required=false)Integer id,
 			@RequestParam(value="type",required=false)Integer type,
@@ -61,6 +61,12 @@ public class Interface {
 			status = interfaceServices.save(name, id, groupid,type, status, faceurl, method, url, writers, version, text, returntext);
 			return new ModelAndView("redirect:/interface-list.do?id=1"); 
 		}
+	}
+	
+	@RequestMapping("/interface-delete")
+	public ModelAndView delete(Model model,Integer id,Integer groupid){
+		int stauts = interfaceServices.delete(id);
+		return new ModelAndView("redirect:/interface-list.do?id="+groupid); 
 	}
 	
 	

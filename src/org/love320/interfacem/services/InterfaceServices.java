@@ -83,4 +83,11 @@ public class InterfaceServices extends ServicesBase {
 		return resJdbc.update(sql,groupid,name,type,status,faceurl,method,url,writers,version,text,returntext,id);
 	}
 
+	public int delete(Integer id) {
+		String sql = "DELETE FROM `interface` WHERE  `id`=? LIMIT 1;";
+		resJdbc.update(sql,id);
+		sql = "DELETE FROM `parameter` WHERE  `faceid`=? LIMIT 1;";
+		return resJdbc.update(sql,id);
+	}
+
 }
