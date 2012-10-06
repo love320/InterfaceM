@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.love320.interfacem.services.InterfaceServices;
+import org.love320.interfacem.services.ParameterServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +22,7 @@ public class Interface {
 	public String list(Model model,@RequestParam(value="id",required=false) Integer id){
 		if(id == null || id <= 0 ) id = 1;//初始化id值
 		List listgroup = interfaceServices.newFaceGroup();//获取组列表
-		List listface = interfaceServices.newFaceList(id);//获取指定组列表
+		List listface = interfaceServices.newFaceListInfo(id);//获取指定组列表并详细参数信息
 		model.addAttribute("listgroup",listgroup);
 		model.addAttribute("listface", listface);
 		model.addAttribute("groupid",id);

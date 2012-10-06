@@ -52,7 +52,6 @@ public class ParameterServices extends ServicesBase {
 		List list = newListData(faceid,0,species);
 		List newlist = new ArrayList();
 		newTreeToList(newlist,list,-1);
-		System.out.println(newlist);
 		return newlist;
 	}
 	

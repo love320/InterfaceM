@@ -11,6 +11,9 @@ import org.springframework.stereotype.Service;
 public class InterfaceServices extends ServicesBase {
 	@Autowired
 	private JdbcTemplate resJdbc;
+	
+	@Autowired
+	private ParameterServices parameterServices; 
 
 	/** 获取接口组名列表 */
 	public List newFaceGroup() {
@@ -24,6 +27,28 @@ public class InterfaceServices extends ServicesBase {
 		sql += " where groupid = ? order by id asc";
 		return resJdbc.queryForList(sql, id);
 	}
+	
+	/**获取指定组接口列表并加入参数信息*/
+	public List newFaceListInfo(Integer id) {
+		List list = newFaceList(id);
+		return newAddParaInfo(list);
+	}
+	
+	//加入参数信息
+	public List newAddParaInfo(List list){
+		for(Object object : list){
+			Map sing = (Map)object;
+			Integer id = (Integer)sing.get("id");
+			//传入信息
+			List inList = parameterServices.newListByIdAndSuperior(id, 1);
+			//传出信息
+			List outList = parameterServices.newListByIdAndSuperior(id, 2);
+			sing.put("inlist",inList);
+			sing.put("outlist", outList);
+		}
+		return list;
+	}
+	
 
 	public Map newInfo(Integer id) {
 		String sql = "SELECT * FROM interface WHERE id = ?";
@@ -41,8 +66,7 @@ public class InterfaceServices extends ServicesBase {
 		int id = resJdbc.update(sql, name,groupid);
 		// 查询接口id
 		// 使用LAST_INSERT_ID()数据库方式获取新增id （线程是安全的）
-		id = resJdbc
-				.queryForInt("SELECT LAST_INSERT_ID() from interface limit 1");
+		id = resJdbc.queryForInt("SELECT LAST_INSERT_ID() from interface limit 1");
 		if (id <= 0) {
 			// 使用获取新增最大id，获取新新增id (线程是不安全)
 			id = resJdbc.queryForInt("select max(id) from interface ");
