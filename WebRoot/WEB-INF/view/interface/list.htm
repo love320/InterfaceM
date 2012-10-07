@@ -49,7 +49,9 @@
 						</div>	
 					</li>
 					<#list listface as xx>
-					<li><a href="#romdata${xx.id}"><i class="icon-chevron-right"></i>${xx.name}</a></li>
+					<li><a href="#romdata${xx.id}"><i class="icon-chevron-right"></i>${xx.name}
+					<#if xx.status != 5 ><span class="label label-important">开发</span></#if>
+					</a></li>
 					</#list>
 				</ul>
 			</div>
@@ -62,6 +64,11 @@
 				<h3 >
 				<a href="${base}/interface-input.do?id=${xx.id}" class="btn btn-link" title="修改"><i class="icon-edit"></i></a>
 				${xx.name}
+				<#if xx.status == 1 ><span class="label">准备</span></#if>
+					<#if xx.status == 2 ><span class="label label-inverse">编码</span></#if>
+					<#if xx.status == 3 ><span class="label label-warning">调试</span></#if>
+					<#if xx.status == 4 ><span class="label label-info">测试</span></#if>
+					<#if xx.status == 5 ><span class="label label-success">稳定</span></#if>
 				</h3>
 				<p>${xx.text}</p>
 				<h4>请求字段</h4>
