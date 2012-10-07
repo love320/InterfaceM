@@ -50,7 +50,7 @@
 					</li>
 					<#list listface as xx>
 					<li><a href="#romdata${xx.id}"><i class="icon-chevron-right"></i>${xx.name}
-					<#if xx.status != 5 ><span class="label label-important">开发</span></#if>
+					<#if (xx.status != 5) && (xx.status != 4) ><span class="label label-important">开发</span></#if>
 					</a></li>
 					</#list>
 				</ul>
