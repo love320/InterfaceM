@@ -157,9 +157,8 @@ base=springMacroRequestContext.getContextUrl("")>
 				  </div>
 				</div>
 				
-				<legend>输入参数</legend>
 				<section id="romdataC">
-					
+					<legend><h3 id="emphasis">输入参数</h3></legend>
 					<input type="hidden" name="faceid" id="faceid" value="${entity.id}" />
 					<input type="hidden" name="parasaveurl" id="parasaveurl" value="${base}/parameter-save.do" />
 					<input type="hidden" name="paradeleteurl" id="paradeleteurl" value="${base}/parameter-delete.do" />
@@ -221,8 +220,9 @@ base=springMacroRequestContext.getContextUrl("")>
 					<button class="btn" type="button" onclick="parameterAdd(this,1);">添加</button>
 				</section>	
 				
-				<legend>返回参数</legend>
+				<br/>
 				<section id="romdataD">	
+					<legend><h3 id="emphasis">返回参数</h3></legend>
 					<div id="paraReturndiv"></div>	
 					<button class="btn" type="button" onclick="parameterAdd(this,2);">添加</button>
 				</section>

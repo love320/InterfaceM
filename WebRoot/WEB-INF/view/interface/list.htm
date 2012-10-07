@@ -58,6 +58,7 @@
 			<div class="span9">
 			<#list listface as xx>
 			<section id="romdata${xx.id}">
+			<legend></legend>
 				<h3 >
 				<a href="${base}/interface-input.do?id=${xx.id}" class="btn btn-link" title="修改"><i class="icon-edit"></i></a>
 				${xx.name}
@@ -144,7 +145,7 @@
 <pre class="prettyprint ">
 ${xx.returntext}
 </pre>
-				<hr class="bs-docs-separator">
+				
 </section>
 </#list>
 
