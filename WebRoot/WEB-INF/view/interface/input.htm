@@ -173,9 +173,13 @@ base=springMacroRequestContext.getContextUrl("")>
 						<input type="hidden" name="species" id="species" value="{$T.Item.species}" />
 						{#for index = 1 to $T.Item.level}<i class="icon-minus"></i>{#/for}  
 						<select name="type" id="type"  class="span2" >
-								  <option value="1" {#if $T.Item.type == 1} selected {#/if}  >整形</option>
-								  <option value="2"  {#if $T.Item.type == 2} selected {#/if} >浮点</option>
-								  <option value="3"  {#if $T.Item.type == 3} selected {#/if}  >字符串</option>
+								  <option value="1" {#if $T.Item.type == 1} selected {#/if} >整形</option>
+								  <option value="2" {#if $T.Item.type == 2} selected {#/if} >浮点</option>
+								  <option value="3" {#if $T.Item.type == 3} selected {#/if} >字符串</option>
+								  <option value="4" {#if $T.Item.type == 4} selected {#/if} >二进制</option>
+								  <option value="5" {#if $T.Item.type == 5} selected {#/if} >时间</option>
+								  <option value="6" {#if $T.Item.type == 6} selected {#/if} >spatial</option>
+								  <option value="7" {#if $T.Item.type == 7} selected {#/if} >其它</option>
 						</select>
 						 <select name="isnull" id="isnull"  class="span2" >
 								  <option value="1" {#if $T.Item.isnull == 1} selected {#/if} >可为空</option>
@@ -198,8 +202,12 @@ base=springMacroRequestContext.getContextUrl("")>
 					 <input type="hidden" name="species" id="species" value="0" />
 						<select name="type" id="type"  class="span2" >
 								  <option value="1" selected >整形</option>
-								  <option value="2">浮点</option>
+								  <option value="2" >浮点</option>
 								  <option value="3" >字符串</option>
+								  <option value="4" >二进制</option>
+								  <option value="5" >时间</option>
+								  <option value="6" >spatial</option>
+								  <option value="7" >其它</option>
 						</select>
 						 <select name="isnull" id="isnull"  class="span2" >
 								  <option value="1" selected>可为空</option>
