@@ -1,16 +1,18 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               5.1.41 - Source distribution
--- Server OS:                    Win32
--- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2012-10-07 00:41:15
+-- Server version:               5.1.54-log - MySQL Community Server (GPL)
+-- Server OS:                    unknown-linux-gnu
+-- HeidiSQL version:             7.0.0.4197
+-- Date/time:                    2012-10-08 09:06:41
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
-/*!40014 SET FOREIGN_KEY_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Dumping structure for table interfacem.interface
+DROP TABLE IF EXISTS `interface`;
 CREATE TABLE IF NOT EXISTS `interface` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `groupid` int(11) DEFAULT NULL COMMENT '组id',
@@ -29,16 +31,17 @@ CREATE TABLE IF NOT EXISTS `interface` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COMMENT='接口名表';
 
--- Dumping data for table interfacem.interface: 12 rows
+-- Dumping data for table interfacem.interface: 2 rows
 DELETE FROM `interface`;
 /*!40000 ALTER TABLE `interface` DISABLE KEYS */;
 INSERT INTO `interface` (`id`, `groupid`, `name`, `type`, `status`, `text`, `version`, `faceurl`, `url`, `method`, `returntext`, `createtime`, `updatetime`, `writers`) VALUES
-	(1, 1, '统计成功备份Rom次数的接口', 1, 1, '备份系统成功后，请求该接口。返回格式为JSON，请求方式为GET。', '0', 'gphone_bakup_succ.json', '', 1, '{"code":"1"}', NULL, '2012-10-06 16:27:26', '张迪'),
-	(29, 1, '获取“开机画面”资源列表', 1, 1, '客户端因要展示“开机画面”资源列表以便用户下载。故需要请求服务器，传回所需信息。', '0', 'getstartpage.json', '', 1, '{\r\n“code”:”1”,\r\n”result”:[\r\n{\r\n“starpage_img”:”http://www.baidu.com”,\r\n”startpage_id”:”123”,\r\n“startpage_name”:”刷机画面啦”\r\n},……\r\n],\r\n			“pagecount”:”101”\r\n}', '2012-10-06 16:28:19', '2012-10-06 16:35:00', '');
+	(1, 1, '统计成功安装数', 1, 5, '统计系统成功安装后，请求该接口。返回格式为JSON，请求方式为GET。', '0', 'setup_succ.json', '', 1, '{"code":"1"}', NULL, '2012-10-08 09:09:45', '张迪'),
+	(29, 1, '获取资源列表', 1, 1, '客户端因要展示资源列表以便用户下载。故需要请求服务器，传回所需信息。', '0', 'getstartpage.json', '', 1, '{\r\n“code”:”1”,\r\n”result”:[\r\n{\r\n“starpage_img”:”http://www.baidu.com”,\r\n”startpage_id”:”123”,\r\n“startpage_name”:”刷机画面啦”\r\n},……\r\n],\r\n			“pagecount”:”101”\r\n}', '2012-10-06 16:28:19', '2012-10-08 09:09:35', '');
 /*!40000 ALTER TABLE `interface` ENABLE KEYS */;
 
 
 -- Dumping structure for table interfacem.interfacegroup
+DROP TABLE IF EXISTS `interfacegroup`;
 CREATE TABLE IF NOT EXISTS `interfacegroup` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL COMMENT '组名',
@@ -59,6 +62,7 @@ INSERT INTO `interfacegroup` (`id`, `name`, `type`, `status`, `text`, `createtim
 
 
 -- Dumping structure for table interfacem.parameter
+DROP TABLE IF EXISTS `parameter`;
 CREATE TABLE IF NOT EXISTS `parameter` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `faceid` int(10) NOT NULL DEFAULT '0' COMMENT '接口id',
@@ -76,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `parameter` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=120 DEFAULT CHARSET=utf8 COMMENT='参数表';
 
--- Dumping data for table interfacem.parameter: 22 rows
+-- Dumping data for table interfacem.parameter: 27 rows
 DELETE FROM `parameter`;
 /*!40000 ALTER TABLE `parameter` DISABLE KEYS */;
 INSERT INTO `parameter` (`id`, `faceid`, `superior`, `type`, `name`, `nametext`, `value`, `isnull`, `species`, `text`, `createtime`, `updatetime`, `order`) VALUES
@@ -108,5 +112,6 @@ INSERT INTO `parameter` (`id`, `faceid`, `superior`, `type`, `name`, `nametext`,
 	(118, 29, 115, 3, 'startpage_name', '开机画面名称', NULL, 2, 2, 0, '2012-10-06 16:33:58', NULL, 0),
 	(119, 29, 115, 1, 'pagecount', '总页数', NULL, 2, 2, 0, '2012-10-06 16:33:59', NULL, 0);
 /*!40000 ALTER TABLE `parameter` ENABLE KEYS */;
-/*!40014 SET FOREIGN_KEY_CHECKS=1 */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
