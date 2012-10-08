@@ -56,7 +56,7 @@ public class Interface {
 		if(id == null || id <= 0){
 			//创建接口名
 			id = interfaceServices.newCreateFace(name,groupid);
-			return new ModelAndView("redirect:/interface-input.do?id="+id); 
+			return new ModelAndView("redirect:/interface-input.do?id="+groupid); 
 		}else{
 			int sta = interfaceServices.save(name, id, groupid,type, status, faceurl, method, url, writers, version, text, returntext);
 			return new ModelAndView("redirect:/interface-list.do?id=1"); 
