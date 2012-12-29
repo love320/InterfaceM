@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v6.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="packlib/org.springframework.web-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/org.springframework.web.servlet-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/org.springframework.context-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/org.springframework.core-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/org.springframework.beans-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/org.springframework.asm-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/org.springframework.transaction-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/org.springframework.expression-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/org.springframework.context.support-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/org.springframework.jdbc-3.1.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="packlib/commons-dbcp-1.4.jar"/>
-	<classpathentry kind="lib" path="packlib/commons-logging.jar"/>
-	<classpathentry kind="lib" path="packlib/commons-pool-1.6.jar"/>
-	<classpathentry kind="lib" path="packlib/mysql-connector-java-5.1.13.jar"/>
-	<classpathentry kind="lib" path="packlib/freemarker.jar"/>
-	<classpathentry kind="lib" path="packlib/gson-2.2.2.jar"/>
-	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+	<classpathentry kind="output" path="build/classes"/>
 </classpath>
