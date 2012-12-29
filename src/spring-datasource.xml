@@ -11,32 +11,26 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<bean id="resJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+
+	<!-- JDBC连接的配置文件 -->
+	<context:property-placeholder location="classpath:jdbc.properties" ignore-unresolvable="true" />
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<!-- 	
-		<property name="url" value="jdbc:mysql://127.0.0.1:3306/interfacem?useUnicode=true&amp;characterEncoding=utf-8" />
-		<property name="username" value="root" />
-		<property name="password" value="123456" />
-		-->
-		<property name="url" value="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_interfacem?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnectForPools=true" />
-		<property name="username" value="21j3kw1j0n" />
-		<property name="password" value="jj434l11y3k10l3z401l2w2kl31k53l32zimzwzy" /> 
-		 
-		<property name="initialSize" value="5"></property>
-		<property name="maxActive" value="30"></property>
-		<property name="maxIdle" value="20"></property>
-		<property name="minIdle" value="1"></property>
-		<!-- 设置在自动回收超时连接的时候打印连接的超时错误  -->  
-		<property name="logAbandoned" value="true"/>  
-		<!-- 设置自动回收超时连接 -->  
-		<property name="removeAbandoned"  value="true"/> 
-		<!-- 自动回收超时时间(以秒数为单位) -->  
-		<property name="removeAbandonedTimeout" value="10"/> 
-		<!-- 超时等待时间以毫秒为单位  -->  
-		<property name="maxWait" value="100"/>  
-		
+		<property name="driverClass" value="${jdbc.driverClass}" />
+		<property name="jdbcUrl" value="${jdbc.jdbcUrl}" />
+		<property name="user" value="${jdbc.user}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="minPoolSize" value="${jdbc.miniPoolSize}" />
+		<property name="maxPoolSize" value="${jdbc.maxPoolSize}" />
+		<property name="initialPoolSize" value="${jdbc.initialPoolSize}" />
+		<property name="maxIdleTime" value="${jdbc.maxIdleTime}" />
+		<property name="acquireIncrement" value="${jdbc.acquireIncrement}" />
+
+		<property name="acquireRetryAttempts" value="${jdbc.acquireRetryAttempts}" />
+		<property name="acquireRetryDelay" value="${jdbc.acquireRetryDelay}" />
+		<property name="checkoutTimeout" value="${jdbc.checkoutTimeout}" />
+
 	</bean>
 
 </beans>
