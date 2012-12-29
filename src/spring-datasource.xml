@@ -15,15 +15,15 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		
-		<!-- <property name="url" value="jdbc:mysql://127.0.0.1:3306/interfacem?useUnicode=true&amp;characterEncoding=utf-8" />
+		<!-- 	
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/interfacem?useUnicode=true&amp;characterEncoding=utf-8" />
 		<property name="username" value="root" />
-		<property name="password" value="123456" /> -->
-		
-		<property name="url" value="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_interfacem?useUnicode=true&amp;characterEncoding=utf-8" />
+		<property name="password" value="123456" />
+		-->
+		<property name="url" value="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_interfacem?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnectForPools=true" />
 		<property name="username" value="21j3kw1j0n" />
-		<property name="password" value="jj434l11y3k10l3z401l2w2kl31k53l32zimzwzy" />
-		
+		<property name="password" value="jj434l11y3k10l3z401l2w2kl31k53l32zimzwzy" /> 
+		 
 		<property name="initialSize" value="5"></property>
 		<property name="maxActive" value="30"></property>
 		<property name="maxIdle" value="20"></property>
