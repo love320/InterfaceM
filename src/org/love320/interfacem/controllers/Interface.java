@@ -31,7 +31,7 @@ public class Interface {
 	
 	@RequestMapping("/interface-input")
 	public String input(Model model,@RequestParam(value="id",required=false) Integer id){
-		if(id != null || id >= 0 ) {
+		if(id != null && id >= 0 ) {
 			Map entity = interfaceServices.newInfo(id);
 			model.addAttribute("entity",entity);
 		}
@@ -56,9 +56,9 @@ public class Interface {
 		if(id == null || id <= 0){
 			//创建接口名
 			id = interfaceServices.newCreateFace(name,groupid);
-			return new ModelAndView("redirect:/interface-input.do?id="+id); 
+			return new ModelAndView("redirect:/interface-input.do?id="+groupid); 
 		}else{
-			status = interfaceServices.save(name, id, groupid,type, status, faceurl, method, url, writers, version, text, returntext);
+			int sta = interfaceServices.save(name, id, groupid,type, status, faceurl, method, url, writers, version, text, returntext);
 			return new ModelAndView("redirect:/interface-list.do?id=1"); 
 		}
 	}
