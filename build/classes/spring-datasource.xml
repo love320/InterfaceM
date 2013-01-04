@@ -29,7 +29,6 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 		<property name="acquireRetryAttempts" value="${jdbc.acquireRetryAttempts}" />
 		<property name="acquireRetryDelay" value="${jdbc.acquireRetryDelay}" />
-		<property name="checkoutTimeout" value="${jdbc.checkoutTimeout}" />
 
 	</bean>
 
